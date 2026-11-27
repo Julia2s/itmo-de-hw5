@@ -1,0 +1,41 @@
+﻿**********************
+Начало записи сценария Windows PowerShell
+Время начала: 20261127131811
+Имя пользователя: DESKTOP-3H8F2AH\julia
+Запуск от имени пользователя: DESKTOP-3H8F2AH\julia
+Имя конфигурации: 
+Компьютер: DESKTOP-3H8F2AH (Microsoft Windows NT 10.0.26300.0)
+Ведущее приложение: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -noexit -command try { . "c:\Users\Юлия\AppData\Local\Programs\Microsoft VS Code\661626d0e7\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+ИД процесса: 21652
+PSVersion: 5.1.26100.9818
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9818
+BuildVersion: 10.0.26100.9818
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Downloaded and verified 3 CSV files to data\results_cpu
+        ]
+      ]
+    },
+    "skills_3.csv": {
+      "rows": 144024,
+      "expected_rows": 144024,
+      "total_frequency": 506549,
+      "expected_total_frequency": 506549,
+      "top10_match": true,
+      "full_match": true,
+      "sha256_match": true,
+      "sha256": "072f5ee88cd65cee8126578bef39a8a6e5f0a2658ce44aec82d3715e23ae7652"
+    }
+  }
+}
+
+
+SCREENSHOT: report/screenshots/10-cpu-running.png
+**********************
+Конец записи протокола Windows PowerShell
+Время окончания: 20261127131914
+**********************

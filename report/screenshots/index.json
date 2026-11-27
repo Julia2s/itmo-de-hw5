@@ -1,0 +1,86 @@
+[
+  {
+    "file": "01-cluster.png",
+    "source_attachment": "C:\\Users\\0E3B~1\\AppData\\Local\\Temp\\codex-clipboard-266f4de3-93eb-47ba-9e84-45eb9078bd96.png",
+    "sha256": "e55636267a237126986da36b20c74ba566c481bb13e7eb45cd119f17044b2121",
+    "description": "Ready node; namespace, configuration and priorities created"
+  },
+  {
+    "file": "01-cluster-versions.png",
+    "source_attachment": "C:\\Users\\0E3B~1\\AppData\\Local\\Temp\\codex-clipboard-4132b273-e26d-410a-8fc3-202e386199b9.png",
+    "sha256": "73acd37234dc12f14388258127a53f3d1433e6816216650193ecc0a98763b463",
+    "description": "Additional evidence: Kubernetes versions, Ready node and metrics-server addon"
+  },
+  {
+    "file": "02-image.png",
+    "source_attachment": "C:\\Users\\0E3B~1\\AppData\\Local\\Temp\\codex-clipboard-2a54e186-3126-4c12-8446-13fa2254ce1a.png",
+    "sha256": "0c511fff4d9c6313681babb069f004ce20ff0c9e203095dc82825474a27e8b33",
+    "description": "Successful Docker build; image load command entered, completion not shown"
+  },
+  {
+    "file": "03-s3.png",
+    "source_attachment": "C:\\Users\\0E3B~1\\AppData\\Local\\Temp\\codex-clipboard-d379ccad-bade-4180-98f6-c4c775a7359d.png",
+    "sha256": "bb1d506f680a74a1172f298a2cc9a174ea4506c6d6c5da26ffc9bacb21e43621",
+    "description": "RustFS Ready, PVC Bound, original/source/target checksum match"
+  },
+  {
+    "file": "04-memory-baseline.png",
+    "source_attachment": "C:\\Users\\0E3B~1\\AppData\\Local\\Temp\\codex-clipboard-5ae84c30-46d1-4fc7-9174-3dba1eaab1fa.png",
+    "sha256": "253fce856eac76ea5c8eb23d328afd5ffee71df0c3aa89ebc72aa67164252996",
+    "description": "Three successful baseline memory measurements and proposed limit"
+  },
+  {
+    "file": "05-oomkilled.png",
+    "source_attachment": "C:\\Users\\0E3B~1\\AppData\\Local\\Temp\\codex-clipboard-56d5116d-3ddf-4700-8c7d-0a212930fc4e.png",
+    "sha256": "2c809dff13d25a5df10c98e7f0a8e5af527255d07cf8e1305b3a1ea78ae2eb45",
+    "description": "OOMKilled, exit 137, memory limit 64Mi"
+  },
+  {
+    "file": "06-memory-tuned.png",
+    "source_attachment": "C:\\Users\\0E3B~1\\AppData\\Local\\Temp\\codex-clipboard-000b4d62-7fa4-45fa-8454-d10738ab213e.png",
+    "sha256": "1b347569b19aa90446ca0262b09abb292749d05071fd8a4ce37046243a3d31dc",
+    "description": "Three successful runs with 176Mi and full HW3 equality"
+  },
+  {
+    "file": "07-parallel.png",
+    "source_attachment": "C:\\Users\\0E3B~1\\AppData\\Local\\Temp\\codex-clipboard-2d4263a4-fbd1-43ea-a9ac-ee1f5ca3f22b.png",
+    "sha256": "4322851205f635602bb0b2089f9bc0955817e55405e03623ee1e1d09623408df",
+    "description": "Two indexed map Pods Running simultaneously"
+  },
+  {
+    "file": "08-results.png",
+    "source_attachment": "C:\\Users\\0E3B~1\\AppData\\Local\\Temp\\codex-clipboard-44b85917-b1fd-4d95-a675-bef41358af6f.png",
+    "sha256": "9a7fabe30b58107f15988cad2dfb7dd3eaa5a82b5e1c294e38b3299d84a8f3dd",
+    "description": "Map 4/4, reducer Complete, full HW3 equality and top-10 pairs"
+  },
+  {
+    "file": "09-cpu-pending.png",
+    "source_attachment": "C:\\Users\\0E3B~1\\AppData\\Local\\Temp\\codex-clipboard-2bed333b-aecf-4b83-9523-0f2187d81bdb.png",
+    "sha256": "c7f1943598ff1314a8c6f474e0a3955e63a2de2936b8b819e89fd4e4ad0db99c",
+    "description": "Running and Pending workers, matched Insufficient cpu event"
+  },
+  {
+    "file": "10-cpu-running.png",
+    "source_attachment": "C:\\Users\\0E3B~1\\AppData\\Local\\Temp\\codex-clipboard-a99dbd89-dd2b-46c6-be40-19b4826148c3.png",
+    "sha256": "cb96ffb3239e65b021fe36906868749fd474fc12584559b20f81de3e3953807f",
+    "description": "Same Pending Pod later Succeeded; all parts and verification complete"
+  },
+  {
+    "file": "11-preemption.png",
+    "source_attachment": "C:\\Users\\0E3B~1\\AppData\\Local\\Temp\\codex-clipboard-cc601e35-db14-4412-bb5a-d8edd61dfd23.png",
+    "sha256": "1261db9ae398baa90222304a618808b1316e49cd073c5fc04ca5de43366f20a8",
+    "description": "Priority classes and UID-matched scheduler preemption evidence"
+  },
+  {
+    "file": "12-quota.png",
+    "source_attachment": "C:\\Users\\0E3B~1\\AppData\\Local\\Temp\\codex-clipboard-eaa6f4e1-72d5-4d01-be25-578a3195190c.png",
+    "sha256": "713fa31573dc1011d2ad921b49866fdd99f3026a732905b999c9d70cf6bccf09",
+    "description": "ResourceQuota used/hard and FailedCreate exceeded quota"
+  },
+  {
+    "file": "13-quota-released.png",
+    "source_attachment": "C:\\Users\\0E3B~1\\AppData\\Local\\Temp\\codex-clipboard-d78dc3ca-c4d9-4836-9c2c-46cebbfd6716.png",
+    "sha256": "9eba13362c6644f2a83ab66383158da5e1a6e1990aca970e6b6b4115bb2c9c3c",
+    "description": "Final compact screenshot: map 4/4, reducer Complete, quota released, HW3 equality"
+  }
+]

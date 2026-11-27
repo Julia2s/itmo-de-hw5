@@ -1,0 +1,222 @@
+﻿{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "creationTimestamp": "2026-11-27T10:25:23Z",
+                "generateName": "quota-partition-",
+                "generation": 1,
+                "labels": {
+                    "app": "skills-experiment",
+                    "batch.kubernetes.io/controller-uid": "907a2d73-1eb2-413e-9800-4fa4f96ce2b0",
+                    "batch.kubernetes.io/job-name": "quota-partition",
+                    "controller-uid": "907a2d73-1eb2-413e-9800-4fa4f96ce2b0",
+                    "experiment": "quota",
+                    "job-name": "quota-partition"
+                },
+                "name": "quota-partition-cf2kl",
+                "namespace": "hw5",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "batch/v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "Job",
+                        "name": "quota-partition",
+                        "uid": "907a2d73-1eb2-413e-9800-4fa4f96ce2b0"
+                    }
+                ],
+                "resourceVersion": "4326",
+                "uid": "87afa24e-8565-41a7-bbad-7510f27d086b"
+            },
+            "spec": {
+                "automountServiceAccountToken": false,
+                "containers": [
+                    {
+                        "args": [
+                            "--parts",
+                            "4",
+                            "--prefix",
+                            "hw5/quota"
+                        ],
+                        "command": [
+                            "python",
+                            "src/partition.py"
+                        ],
+                        "envFrom": [
+                            {
+                                "configMapRef": {
+                                    "name": "hw5-config"
+                                }
+                            },
+                            {
+                                "secretRef": {
+                                    "name": "s3-credentials"
+                                }
+                            }
+                        ],
+                        "image": "hw5-skills:local",
+                        "imagePullPolicy": "Never",
+                        "name": "worker",
+                        "resources": {
+                            "limits": {
+                                "cpu": "100m",
+                                "memory": "256Mi"
+                            },
+                            "requests": {
+                                "cpu": "100m",
+                                "memory": "256Mi"
+                            }
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File"
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "enableServiceLinks": true,
+                "nodeName": "hw5",
+                "preemptionPolicy": "PreemptLowerPriority",
+                "priority": 0,
+                "restartPolicy": "Never",
+                "schedulerName": "default-scheduler",
+                "securityContext": {},
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "terminationGracePeriodSeconds": 10,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    }
+                ]
+            },
+            "status": {
+                "allocatedResources": {
+                    "cpu": "100m",
+                    "memory": "256Mi"
+                },
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-27T10:25:39Z",
+                        "message": "pod sandbox is not ready",
+                        "observedGeneration": 1,
+                        "reason": "PodSandboxNotReady",
+                        "status": "False",
+                        "type": "PodReadyToStartContainers"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-27T10:25:23Z",
+                        "observedGeneration": 1,
+                        "reason": "PodCompleted",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-27T10:25:38Z",
+                        "observedGeneration": 1,
+                        "reason": "PodCompleted",
+                        "status": "False",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-27T10:25:38Z",
+                        "observedGeneration": 1,
+                        "reason": "PodCompleted",
+                        "status": "False",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-27T10:25:23Z",
+                        "observedGeneration": 1,
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "allocatedResources": {
+                            "cpu": "100m",
+                            "memory": "256Mi"
+                        },
+                        "containerID": "containerd://45e6e494743b96e54f2232003ad44d8daea510b208b043af489c4f592cf5e825",
+                        "image": "docker.io/library/hw5-skills:local",
+                        "imageID": "sha256:c22a2a0fc9c23d277c03cb3ac7ce84f1e9a689b33ba000c29c26f83dfa1d695d",
+                        "lastState": {},
+                        "name": "worker",
+                        "ready": false,
+                        "resources": {
+                            "limits": {
+                                "cpu": "100m",
+                                "memory": "256Mi"
+                            },
+                            "requests": {
+                                "cpu": "100m",
+                                "memory": "256Mi"
+                            }
+                        },
+                        "restartCount": 0,
+                        "started": false,
+                        "state": {
+                            "terminated": {
+                                "containerID": "containerd://45e6e494743b96e54f2232003ad44d8daea510b208b043af489c4f592cf5e825",
+                                "exitCode": 0,
+                                "finishedAt": "2026-11-27T10:25:37Z",
+                                "reason": "Completed",
+                                "startedAt": "2026-11-27T10:25:24Z"
+                            }
+                        },
+                        "user": {
+                            "linux": {
+                                "gid": 10001,
+                                "supplementalGroups": [
+                                    10001
+                                ],
+                                "uid": 10001
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "192.168.49.2",
+                "hostIPs": [
+                    {
+                        "ip": "192.168.49.2"
+                    }
+                ],
+                "observedGeneration": 1,
+                "phase": "Succeeded",
+                "podIP": "10.244.0.37",
+                "podIPs": [
+                    {
+                        "ip": "10.244.0.37"
+                    }
+                ],
+                "qosClass": "Guaranteed",
+                "resources": {
+                    "requests": {
+                        "memory": "256Mi"
+                    }
+                },
+                "startTime": "2026-11-27T10:25:23Z"
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

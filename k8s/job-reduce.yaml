@@ -1,0 +1,24 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: skills-reduce
+  namespace: hw5
+spec:
+  backoffLimit: 0
+  activeDeadlineSeconds: 900
+  template:
+    spec:
+      restartPolicy: Never
+      automountServiceAccountToken: false
+      containers:
+        - name: worker
+          image: hw5-skills:local
+          imagePullPolicy: Never
+          command: [python, src/reduce.py]
+          args: [--prefix, hw5/parallel]
+          envFrom:
+            - configMapRef: {name: hw5-config}
+            - secretRef: {name: s3-credentials}
+          resources:
+            requests: {cpu: 500m, memory: 128Mi}
+            limits: {cpu: '1', memory: 1Gi}

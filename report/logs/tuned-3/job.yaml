@@ -1,0 +1,95 @@
+﻿apiVersion: batch/v1
+kind: Job
+metadata:
+  annotations:
+    hw5/formula: ceil(peak * margin / 16) * 16 MiB
+    hw5/margin: "1.3"
+    hw5/peak-mib: "129.308594"
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"batch/v1","kind":"Job","metadata":{"annotations":{"hw5/formula":"ceil(peak * margin / 16) * 16 MiB","hw5/margin":"1.3","hw5/peak-mib":"129.308594"},"labels":{"app":"skills-experiment","experiment":"tuned-3"},"name":"tuned-3","namespace":"hw5"},"spec":{"activeDeadlineSeconds":900,"backoffLimit":0,"template":{"metadata":{"labels":{"app":"skills-experiment","experiment":"tuned-3"}},"spec":{"automountServiceAccountToken":false,"containers":[{"args":["--mode","sequential","--prefix","hw5/tuned-3"],"command":["python","src/worker.py"],"env":[{"name":"S3_ENDPOINT","value":"http://host.docker.internal:9010"}],"envFrom":[{"configMapRef":{"name":"hw5-config"}},{"secretRef":{"name":"s3-credentials"}}],"image":"hw5-skills:local","imagePullPolicy":"Never","name":"worker","resources":{"limits":{"cpu":"1","memory":"176Mi"},"requests":{"cpu":"500m","memory":"176Mi"}}}],"restartPolicy":"Never","terminationGracePeriodSeconds":10}}}}
+  creationTimestamp: "2026-11-27T09:46:34Z"
+  generation: 1
+  labels:
+    app: skills-experiment
+    experiment: tuned-3
+  name: tuned-3
+  namespace: hw5
+  resourceVersion: "1855"
+  uid: 6f482bc6-4514-4288-9454-67bd2c12ed54
+spec:
+  activeDeadlineSeconds: 900
+  backoffLimit: 0
+  completionMode: NonIndexed
+  completions: 1
+  manualSelector: false
+  parallelism: 1
+  podReplacementPolicy: TerminatingOrFailed
+  selector:
+    matchLabels:
+      batch.kubernetes.io/controller-uid: 6f482bc6-4514-4288-9454-67bd2c12ed54
+  suspend: false
+  template:
+    metadata:
+      labels:
+        app: skills-experiment
+        batch.kubernetes.io/controller-uid: 6f482bc6-4514-4288-9454-67bd2c12ed54
+        batch.kubernetes.io/job-name: tuned-3
+        controller-uid: 6f482bc6-4514-4288-9454-67bd2c12ed54
+        experiment: tuned-3
+        job-name: tuned-3
+    spec:
+      automountServiceAccountToken: false
+      containers:
+      - args:
+        - --mode
+        - sequential
+        - --prefix
+        - hw5/tuned-3
+        command:
+        - python
+        - src/worker.py
+        env:
+        - name: S3_ENDPOINT
+          value: http://host.docker.internal:9010
+        envFrom:
+        - configMapRef:
+            name: hw5-config
+        - secretRef:
+            name: s3-credentials
+        image: hw5-skills:local
+        imagePullPolicy: Never
+        name: worker
+        resources:
+          limits:
+            cpu: "1"
+            memory: 176Mi
+          requests:
+            cpu: 500m
+            memory: 176Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Never
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 10
+status:
+  completionTime: "2026-11-27T09:47:34Z"
+  conditions:
+  - lastProbeTime: "2026-11-27T09:47:34Z"
+    lastTransitionTime: "2026-11-27T09:47:34Z"
+    message: Reached expected number of succeeded pods
+    reason: CompletionsReached
+    status: "True"
+    type: SuccessCriteriaMet
+  - lastProbeTime: "2026-11-27T09:47:34Z"
+    lastTransitionTime: "2026-11-27T09:47:34Z"
+    message: Reached expected number of succeeded pods
+    reason: CompletionsReached
+    status: "True"
+    type: Complete
+  ready: 0
+  startTime: "2026-11-27T09:46:34Z"
+  succeeded: 1
+  terminating: 0
+  uncountedTerminatedPods: {}

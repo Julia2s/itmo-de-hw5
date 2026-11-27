@@ -1,0 +1,89 @@
+﻿apiVersion: batch/v1
+kind: Job
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"batch/v1","kind":"Job","metadata":{"annotations":{},"name":"skills-partition","namespace":"hw5"},"spec":{"activeDeadlineSeconds":900,"backoffLimit":0,"template":{"spec":{"automountServiceAccountToken":false,"containers":[{"args":["--parts","4","--prefix","hw5/parallel"],"command":["python","src/partition.py"],"envFrom":[{"configMapRef":{"name":"hw5-config"}},{"secretRef":{"name":"s3-credentials"}}],"image":"hw5-skills:local","imagePullPolicy":"Never","name":"worker","resources":{"limits":{"cpu":"500m","memory":"256Mi"},"requests":{"cpu":"100m","memory":"64Mi"}}}],"restartPolicy":"Never"}}}}
+  creationTimestamp: "2026-11-27T09:55:25Z"
+  generation: 1
+  labels:
+    batch.kubernetes.io/controller-uid: 0cacfba9-dd84-4acb-a6a6-310cd60ced3a
+    batch.kubernetes.io/job-name: skills-partition
+    controller-uid: 0cacfba9-dd84-4acb-a6a6-310cd60ced3a
+    job-name: skills-partition
+  name: skills-partition
+  namespace: hw5
+  resourceVersion: "2319"
+  uid: 0cacfba9-dd84-4acb-a6a6-310cd60ced3a
+spec:
+  activeDeadlineSeconds: 900
+  backoffLimit: 0
+  completionMode: NonIndexed
+  completions: 1
+  manualSelector: false
+  parallelism: 1
+  podReplacementPolicy: TerminatingOrFailed
+  selector:
+    matchLabels:
+      batch.kubernetes.io/controller-uid: 0cacfba9-dd84-4acb-a6a6-310cd60ced3a
+  suspend: false
+  template:
+    metadata:
+      labels:
+        batch.kubernetes.io/controller-uid: 0cacfba9-dd84-4acb-a6a6-310cd60ced3a
+        batch.kubernetes.io/job-name: skills-partition
+        controller-uid: 0cacfba9-dd84-4acb-a6a6-310cd60ced3a
+        job-name: skills-partition
+    spec:
+      automountServiceAccountToken: false
+      containers:
+      - args:
+        - --parts
+        - "4"
+        - --prefix
+        - hw5/parallel
+        command:
+        - python
+        - src/partition.py
+        envFrom:
+        - configMapRef:
+            name: hw5-config
+        - secretRef:
+            name: s3-credentials
+        image: hw5-skills:local
+        imagePullPolicy: Never
+        name: worker
+        resources:
+          limits:
+            cpu: 500m
+            memory: 256Mi
+          requests:
+            cpu: 100m
+            memory: 64Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Never
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+status:
+  completionTime: "2026-11-27T09:55:32Z"
+  conditions:
+  - lastProbeTime: "2026-11-27T09:55:32Z"
+    lastTransitionTime: "2026-11-27T09:55:32Z"
+    message: Reached expected number of succeeded pods
+    reason: CompletionsReached
+    status: "True"
+    type: SuccessCriteriaMet
+  - lastProbeTime: "2026-11-27T09:55:32Z"
+    lastTransitionTime: "2026-11-27T09:55:32Z"
+    message: Reached expected number of succeeded pods
+    reason: CompletionsReached
+    status: "True"
+    type: Complete
+  ready: 0
+  startTime: "2026-11-27T09:55:25Z"
+  succeeded: 1
+  terminating: 0
+  uncountedTerminatedPods: {}

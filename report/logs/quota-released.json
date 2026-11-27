@@ -1,0 +1,42 @@
+{
+  "observed_at": "2026-11-27T10:31:33.148682+00:00",
+  "quota": {
+    "apiVersion": "v1",
+    "kind": "ResourceQuota",
+    "metadata": {
+      "annotations": {
+        "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"ResourceQuota\",\"metadata\":{\"annotations\":{},\"name\":\"hw5-quota\",\"namespace\":\"hw5-quota\"},\"spec\":{\"hard\":{\"limits.cpu\":\"2\",\"limits.memory\":\"4Gi\",\"pods\":\"16\",\"requests.cpu\":\"1\",\"requests.memory\":\"4Gi\"}}}\n"
+      },
+      "creationTimestamp": "2026-11-27T10:25:23Z",
+      "name": "hw5-quota",
+      "namespace": "hw5-quota",
+      "resourceVersion": "4578",
+      "uid": "f99bebab-b9b6-4b37-ac88-57ed462510c2"
+    },
+    "spec": {
+      "hard": {
+        "limits.cpu": "2",
+        "limits.memory": "4Gi",
+        "pods": "16",
+        "requests.cpu": "1",
+        "requests.memory": "4Gi"
+      }
+    },
+    "status": {
+      "hard": {
+        "limits.cpu": "2",
+        "limits.memory": "4Gi",
+        "pods": "16",
+        "requests.cpu": "1",
+        "requests.memory": "4Gi"
+      },
+      "used": {
+        "limits.cpu": "0",
+        "limits.memory": "0",
+        "pods": "0",
+        "requests.cpu": "0",
+        "requests.memory": "0"
+      }
+    }
+  }
+}

@@ -1,0 +1,299 @@
+{
+  "memory": [
+    {
+      "name": "measure-1",
+      "metrics": {
+        "rss_peak_mib": 134.3203125,
+        "source": "cgroup_v1",
+        "peak_mib": 129.1875,
+        "memory_limit": "1073741824",
+        "current_mib": 124.23046875
+      },
+      "elapsed": 60.292,
+      "requests": {
+        "cpu": "500m",
+        "memory": "1Gi"
+      },
+      "limits": {
+        "cpu": "1",
+        "memory": "1Gi"
+      }
+    },
+    {
+      "name": "measure-2",
+      "metrics": {
+        "rss_peak_mib": 135.03125,
+        "source": "cgroup_v1",
+        "peak_mib": 129.30859375,
+        "memory_limit": "1073741824",
+        "current_mib": 124.46484375
+      },
+      "elapsed": 54.968,
+      "requests": {
+        "cpu": "500m",
+        "memory": "1Gi"
+      },
+      "limits": {
+        "cpu": "1",
+        "memory": "1Gi"
+      }
+    },
+    {
+      "name": "measure-3",
+      "metrics": {
+        "rss_peak_mib": 132.75390625,
+        "source": "cgroup_v1",
+        "peak_mib": 127.84765625,
+        "memory_limit": "1073741824",
+        "current_mib": 123.03515625
+      },
+      "elapsed": 53.281,
+      "requests": {
+        "cpu": "500m",
+        "memory": "1Gi"
+      },
+      "limits": {
+        "cpu": "1",
+        "memory": "1Gi"
+      }
+    },
+    {
+      "name": "tuned-1",
+      "metrics": {
+        "rss_peak_mib": 135.51171875,
+        "source": "cgroup_v1",
+        "peak_mib": 131.0625,
+        "memory_limit": "184549376",
+        "current_mib": 124.04296875
+      },
+      "elapsed": 48.964,
+      "requests": {
+        "cpu": "500m",
+        "memory": "176Mi"
+      },
+      "limits": {
+        "cpu": "1",
+        "memory": "176Mi"
+      }
+    },
+    {
+      "name": "tuned-2",
+      "metrics": {
+        "rss_peak_mib": 132.64453125,
+        "source": "cgroup_v1",
+        "peak_mib": 124.25390625,
+        "memory_limit": "184549376",
+        "current_mib": 115.11328125
+      },
+      "elapsed": 50.459,
+      "requests": {
+        "cpu": "500m",
+        "memory": "176Mi"
+      },
+      "limits": {
+        "cpu": "1",
+        "memory": "176Mi"
+      }
+    },
+    {
+      "name": "tuned-3",
+      "metrics": {
+        "rss_peak_mib": 145.2890625,
+        "source": "cgroup_v1",
+        "peak_mib": 146.75390625,
+        "memory_limit": "184549376",
+        "current_mib": 100.6171875
+      },
+      "elapsed": 49.973,
+      "requests": {
+        "cpu": "500m",
+        "memory": "176Mi"
+      },
+      "limits": {
+        "cpu": "1",
+        "memory": "176Mi"
+      }
+    }
+  ],
+  "parallel_parts": [
+    {
+      "pod": "skills-parallel-0-75nnl",
+      "index": 0,
+      "start": 0,
+      "end": 211909622,
+      "lines": 57761,
+      "elapsed_s": 4.28,
+      "peak_mib": 116.25390625
+    },
+    {
+      "pod": "skills-parallel-1-pv6bx",
+      "index": 1,
+      "start": 211909622,
+      "end": 423810887,
+      "lines": 57825,
+      "elapsed_s": 4.24,
+      "peak_mib": 115.2421875
+    },
+    {
+      "pod": "skills-parallel-2-vvmpv",
+      "index": 2,
+      "start": 423810887,
+      "end": 635715091,
+      "lines": 57359,
+      "elapsed_s": 4.527,
+      "peak_mib": 109.49609375
+    },
+    {
+      "pod": "skills-parallel-3-svbhk",
+      "index": 3,
+      "start": 635715091,
+      "end": 847619384,
+      "lines": 56444,
+      "elapsed_s": 4.66,
+      "peak_mib": 113.73828125
+    }
+  ],
+  "jobs": {
+    "skills-parallel": {
+      "start": "2026-11-27T09:55:35Z",
+      "end": "2026-11-27T09:55:56Z",
+      "succeeded": 4
+    },
+    "skills-reduce": {
+      "start": "2026-11-27T09:56:36Z",
+      "end": "2026-11-27T09:56:43Z",
+      "succeeded": 1
+    },
+    "cpu-map": {
+      "start": "2026-11-27T10:10:26Z",
+      "end": "2026-11-27T10:13:01Z",
+      "succeeded": 4
+    },
+    "cpu-reduce": {
+      "start": "2026-11-27T10:14:22Z",
+      "end": "2026-11-27T10:14:35Z",
+      "succeeded": 1
+    },
+    "low-map": {
+      "start": "2026-11-27T10:21:08Z",
+      "end": "2026-11-27T10:23:54Z",
+      "succeeded": 4
+    },
+    "low-reduce": {
+      "start": "2026-11-27T10:25:03Z",
+      "end": "2026-11-27T10:25:15Z",
+      "succeeded": 1
+    },
+    "urgent": {
+      "start": "2026-11-27T10:21:15Z",
+      "end": "2026-11-27T10:21:35Z",
+      "succeeded": 1
+    },
+    "quota-map": {
+      "start": "2026-11-27T10:25:42Z",
+      "end": "2026-11-27T10:28:12Z",
+      "succeeded": 4
+    },
+    "quota-reduce": {
+      "start": "2026-11-27T10:28:15Z",
+      "end": "2026-11-27T10:28:24Z",
+      "succeeded": 1
+    }
+  },
+  "storage": [
+    {
+      "at": "2026-11-27T09:51:52.564130+00:00",
+      "pod": "rustfs-6976b979bb-dnkc7",
+      "restarts": [
+        0
+      ],
+      "metrics": {
+        "memory/memory.usage_in_bytes": 1837355008,
+        "memory/memory.max_usage_in_bytes": 1853104128,
+        "memory/memory.limit_in_bytes": 2147483648
+      }
+    },
+    {
+      "at": "2026-11-27T09:56:50.159557+00:00",
+      "pod": "rustfs-6976b979bb-dnkc7",
+      "restarts": [
+        0
+      ],
+      "metrics": {
+        "memory/memory.usage_in_bytes": 1905254400,
+        "memory/memory.max_usage_in_bytes": 1929859072,
+        "memory/memory.limit_in_bytes": 2147483648
+      }
+    },
+    {
+      "at": "2026-11-27T10:18:20.327246+00:00",
+      "pod": "rustfs-6976b979bb-dnkc7",
+      "restarts": [
+        0
+      ],
+      "metrics": {
+        "memory/memory.usage_in_bytes": 1926684672,
+        "memory/memory.max_usage_in_bytes": 1943527424,
+        "memory/memory.limit_in_bytes": 2147483648
+      }
+    },
+    {
+      "at": "2026-11-27T10:25:18.441428+00:00",
+      "pod": "rustfs-6976b979bb-dnkc7",
+      "restarts": [
+        0
+      ],
+      "metrics": {
+        "memory/memory.usage_in_bytes": 2054098944,
+        "memory/memory.max_usage_in_bytes": 2059116544,
+        "memory/memory.limit_in_bytes": 2147483648
+      }
+    },
+    {
+      "at": "2026-11-27T10:28:29.092716+00:00",
+      "pod": "rustfs-6976b979bb-dnkc7",
+      "restarts": [
+        0
+      ],
+      "metrics": {
+        "memory/memory.usage_in_bytes": 2092187648,
+        "memory/memory.max_usage_in_bytes": 2101788672,
+        "memory/memory.limit_in_bytes": 2147483648
+      }
+    }
+  ],
+  "node": {
+    "capacity": {
+      "cpu": "16",
+      "ephemeral-storage": "1081101176832",
+      "hugepages-1Gi": "0",
+      "hugepages-2Mi": "0",
+      "memory": "7790928Ki",
+      "pods": "110"
+    },
+    "allocatable": {
+      "cpu": "4",
+      "ephemeral-storage": "1081101176832",
+      "hugepages-1Gi": "0",
+      "hugepages-2Mi": "0",
+      "memory": "6Gi",
+      "pods": "110"
+    },
+    "nodeInfo": {
+      "architecture": "amd64",
+      "bootID": "bb946069-421a-4dda-8d29-d82c95db461f",
+      "containerRuntimeVersion": "containerd://2.3.4",
+      "kernelVersion": "5.15.167.4-microsoft-standard-WSL2",
+      "kubeProxyVersion": "",
+      "kubeletVersion": "v1.37.0",
+      "machineID": "b7566eefbea02b7ce85821e86a97158b",
+      "operatingSystem": "linux",
+      "osImage": "Debian GNU/Linux 12 (bookworm)",
+      "runningInUserNamespace": false,
+      "swap": {
+        "capacity": 2147483648
+      },
+      "systemUUID": "b7566eefbea02b7ce85821e86a97158b"
+    }
+  }
+}

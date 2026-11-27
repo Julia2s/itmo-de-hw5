@@ -1,0 +1,24 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: skills-partition
+  namespace: hw5
+spec:
+  backoffLimit: 0
+  activeDeadlineSeconds: 900
+  template:
+    spec:
+      restartPolicy: Never
+      automountServiceAccountToken: false
+      containers:
+        - name: worker
+          image: hw5-skills:local
+          imagePullPolicy: Never
+          command: [python, src/partition.py]
+          args: [--parts, '4', --prefix, hw5/parallel]
+          envFrom:
+            - configMapRef: {name: hw5-config}
+            - secretRef: {name: s3-credentials}
+          resources:
+            requests: {cpu: 100m, memory: 64Mi}
+            limits: {cpu: 500m, memory: 256Mi}

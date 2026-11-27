@@ -1,0 +1,47 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: skills-oom
+  namespace: hw5
+  labels:
+    app: skills-experiment
+    experiment: skills-oom
+spec:
+  backoffLimit: 0
+  activeDeadlineSeconds: 900
+  template:
+    metadata:
+      labels:
+        app: skills-experiment
+        experiment: skills-oom
+    spec:
+      restartPolicy: Never
+      automountServiceAccountToken: false
+      containers:
+      - name: worker
+        image: hw5-skills:local
+        imagePullPolicy: Never
+        command:
+        - python
+        - src/worker.py
+        args:
+        - --mode
+        - sequential
+        - --prefix
+        - hw5/oom
+        env:
+        - name: S3_ENDPOINT
+          value: http://host.docker.internal:9010
+        envFrom:
+        - configMapRef:
+            name: hw5-config
+        - secretRef:
+            name: s3-credentials
+        resources:
+          requests:
+            cpu: 500m
+            memory: 64Mi
+          limits:
+            cpu: '1'
+            memory: 64Mi
+      terminationGracePeriodSeconds: 10

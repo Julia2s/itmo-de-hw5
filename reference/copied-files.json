@@ -1,0 +1,68 @@
+[
+  {
+    "source": "C:\\Users\\Юлия\\Documents\\ITMO-Data-Engineering\\src\\common.py",
+    "destination": "src/common.py",
+    "bytes": 20485,
+    "sha256": "bb27bdef4d00340d23d02695b8564638d5e494087a634580f6d7bcdbbfb7034a"
+  },
+  {
+    "source": "C:\\Users\\Юлия\\Documents\\ITMO-Data-Engineering\\src\\mapreduce_v2.py",
+    "destination": "src/mapreduce_v2.py",
+    "bytes": 6755,
+    "sha256": "e52323c43fc8a220c0fd910d0e3c369f4a48230028084b84ae0bac1662eb5a8f"
+  },
+  {
+    "source": "C:\\Users\\Юлия\\Documents\\ITMO-Data-Engineering\\src\\upload.py",
+    "destination": "src/upload.py",
+    "bytes": 2655,
+    "sha256": "ab36bb4f07c62a99893fe6a1a2d593e2a445fc4da80582d22d711b01d6c04a1b"
+  },
+  {
+    "source": "C:\\Users\\Юлия\\Documents\\ITMO-Data-Engineering\\data\\it_vacancies_2024.csv",
+    "destination": "data/it_vacancies_2024.csv",
+    "bytes": 847619384,
+    "sha256": "fb6a23f662c0b458e7d45d723862df5406cc25366164f4bb8246aad1cd4e83ef"
+  },
+  {
+    "source": "C:\\Users\\Юлия\\Documents\\ITMO-Data-Engineering\\data\\manifests\\mapreduce_v2.json",
+    "destination": "reference/hw3/mapreduce_v2.json",
+    "bytes": 902,
+    "sha256": "700c0be12dc32eba2de8e809319877cf110154f9297c1815859cc54adc3b804d"
+  },
+  {
+    "source": "C:\\Users\\Юлия\\Documents\\ITMO-Data-Engineering\\report\\logs\\03_mapreduce_v2.log",
+    "destination": "reference/hw3/logs/03_mapreduce_v2.log",
+    "bytes": 1752,
+    "sha256": "e8fd2bba6db31ab3a3dbee233beca8d812ab7ff6a48e108b5604b5e192820588"
+  },
+  {
+    "source": "C:\\Users\\Юлия\\Documents\\ITMO-Data-Engineering\\report\\logs\\05_verify.log",
+    "destination": "reference/hw3/logs/05_verify.log",
+    "bytes": 1261,
+    "sha256": "4677b4985c5ac84f668ea35666ef6f15699c17cf8d893f7ab6b797357f19ad06"
+  },
+  {
+    "source": "C:\\Users\\Юлия\\Documents\\ITMO-Data-Engineering\\compose.yaml",
+    "destination": "reference/hw4/compose.yaml",
+    "bytes": 1070,
+    "sha256": "17b490832036bafdbe181dc50bc3b7164edfd94e95d5a027b885d8abc48af15f"
+  },
+  {
+    "source": "C:\\Users\\Юлия\\Documents\\ITMO-Data-Engineering\\data\\results_v2\\skills_1.csv",
+    "destination": "reference/hw3/results_v2/skills_1.csv",
+    "bytes": 29671,
+    "sha256": "21cd3f212d9a0f5fc670b7c3e245f69ebddc53b76eef0ff9dd4919eaff9bbf16"
+  },
+  {
+    "source": "C:\\Users\\Юлия\\Documents\\ITMO-Data-Engineering\\data\\results_v2\\skills_2.csv",
+    "destination": "reference/hw3/results_v2/skills_2.csv",
+    "bytes": 625816,
+    "sha256": "51ca84a101669e4384fecc072e4702d208e371873b4fd97063ac343b53fe5a82"
+  },
+  {
+    "source": "C:\\Users\\Юлия\\Documents\\ITMO-Data-Engineering\\data\\results_v2\\skills_3.csv",
+    "destination": "reference/hw3/results_v2/skills_3.csv",
+    "bytes": 5648732,
+    "sha256": "072f5ee88cd65cee8126578bef39a8a6e5f0a2658ce44aec82d3715e23ae7652"
+  }
+]

@@ -1,0 +1,92 @@
+﻿apiVersion: batch/v1
+kind: Job
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"batch/v1","kind":"Job","metadata":{"annotations":{},"labels":{"app":"skills-experiment","experiment":"measure-1"},"name":"measure-1","namespace":"hw5"},"spec":{"activeDeadlineSeconds":900,"backoffLimit":0,"template":{"metadata":{"labels":{"app":"skills-experiment","experiment":"measure-1"}},"spec":{"automountServiceAccountToken":false,"containers":[{"args":["--mode","sequential","--prefix","hw5/measure-1"],"command":["python","src/worker.py"],"env":[{"name":"S3_ENDPOINT","value":"http://host.docker.internal:9010"}],"envFrom":[{"configMapRef":{"name":"hw5-config"}},{"secretRef":{"name":"s3-credentials"}}],"image":"hw5-skills:local","imagePullPolicy":"Never","name":"worker","resources":{"limits":{"cpu":"1","memory":"1Gi"},"requests":{"cpu":"500m","memory":"1Gi"}}}],"restartPolicy":"Never","terminationGracePeriodSeconds":10}}}}
+  creationTimestamp: "2026-11-27T09:34:33Z"
+  generation: 1
+  labels:
+    app: skills-experiment
+    experiment: measure-1
+  name: measure-1
+  namespace: hw5
+  resourceVersion: "1147"
+  uid: b40c2b59-2b13-452d-8099-96671f5aec39
+spec:
+  activeDeadlineSeconds: 900
+  backoffLimit: 0
+  completionMode: NonIndexed
+  completions: 1
+  manualSelector: false
+  parallelism: 1
+  podReplacementPolicy: TerminatingOrFailed
+  selector:
+    matchLabels:
+      batch.kubernetes.io/controller-uid: b40c2b59-2b13-452d-8099-96671f5aec39
+  suspend: false
+  template:
+    metadata:
+      labels:
+        app: skills-experiment
+        batch.kubernetes.io/controller-uid: b40c2b59-2b13-452d-8099-96671f5aec39
+        batch.kubernetes.io/job-name: measure-1
+        controller-uid: b40c2b59-2b13-452d-8099-96671f5aec39
+        experiment: measure-1
+        job-name: measure-1
+    spec:
+      automountServiceAccountToken: false
+      containers:
+      - args:
+        - --mode
+        - sequential
+        - --prefix
+        - hw5/measure-1
+        command:
+        - python
+        - src/worker.py
+        env:
+        - name: S3_ENDPOINT
+          value: http://host.docker.internal:9010
+        envFrom:
+        - configMapRef:
+            name: hw5-config
+        - secretRef:
+            name: s3-credentials
+        image: hw5-skills:local
+        imagePullPolicy: Never
+        name: worker
+        resources:
+          limits:
+            cpu: "1"
+            memory: 1Gi
+          requests:
+            cpu: 500m
+            memory: 1Gi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Never
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 10
+status:
+  completionTime: "2026-11-27T09:35:44Z"
+  conditions:
+  - lastProbeTime: "2026-11-27T09:35:44Z"
+    lastTransitionTime: "2026-11-27T09:35:44Z"
+    message: Reached expected number of succeeded pods
+    reason: CompletionsReached
+    status: "True"
+    type: SuccessCriteriaMet
+  - lastProbeTime: "2026-11-27T09:35:44Z"
+    lastTransitionTime: "2026-11-27T09:35:44Z"
+    message: Reached expected number of succeeded pods
+    reason: CompletionsReached
+    status: "True"
+    type: Complete
+  ready: 0
+  startTime: "2026-11-27T09:34:33Z"
+  succeeded: 1
+  terminating: 0
+  uncountedTerminatedPods: {}

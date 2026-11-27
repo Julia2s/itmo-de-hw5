@@ -1,0 +1,67 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: quota-map
+  namespace: hw5-quota
+  labels:
+    app: skills-experiment
+    experiment: quota
+spec:
+  completionMode: Indexed
+  completions: 4
+  parallelism: 2
+  backoffLimit: 2
+  activeDeadlineSeconds: 900
+  template:
+    spec:
+      restartPolicy: Never
+      automountServiceAccountToken: false
+      containers:
+      - name: worker
+        image: hw5-skills:local
+        imagePullPolicy: Never
+        command:
+        - python
+        - src/worker.py
+        args:
+        - --mode
+        - part
+        - --prefix
+        - hw5/quota
+        - --pace-seconds
+        - '1.0'
+        env:
+        - name: JOB_COMPLETION_INDEX
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['batch.kubernetes.io/job-completion-index']
+        envFrom:
+        - configMapRef:
+            name: hw5-config
+        - secretRef:
+            name: s3-credentials
+        resources:
+          requests:
+            cpu: 600m
+            memory: 1Gi
+          limits:
+            cpu: 600m
+            memory: 1Gi
+      terminationGracePeriodSeconds: 10
+      nodeSelector:
+        kubernetes.io/hostname: hw5
+    metadata:
+      labels:
+        app: skills-experiment
+        experiment: quota
+  podFailurePolicy:
+    rules:
+    - action: Ignore
+      onPodConditions:
+      - type: DisruptionTarget
+    - action: FailJob
+      onExitCodes:
+        containerName: worker
+        operator: In
+        values:
+        - 137

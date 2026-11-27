@@ -1,0 +1,24 @@
+test_memory_job_override_does_not_change_template (test_operations.MeasurementTests.test_memory_job_override_does_not_change_template) ... ok
+test_three_successful_measurements_and_utf16_powershell_log (test_operations.MeasurementTests.test_three_successful_measurements_and_utf16_powershell_log) ... ok
+test_worker_handles_sigterm_without_committing_partial_result (test_operations.MeasurementTests.test_worker_handles_sigterm_without_committing_partial_result) ... skipped 'SIGTERM exit semantics are tested inside the Linux image'
+test_corrupt_copy_is_rejected (test_operations.MigrationTests.test_corrupt_copy_is_rejected) ... ok
+test_migration_verifies_full_bytes_not_multipart_etag (test_operations.MigrationTests.test_migration_verifies_full_bytes_not_multipart_etag) ... ok
+test_source_modified_during_copy_is_rejected (test_operations.MigrationTests.test_source_modified_during_copy_is_rejected) ... ok
+test_changed_input_and_manifest_gap_rejected (test_pipeline.PipelineTests.test_changed_input_and_manifest_gap_rejected) ... ok
+test_chunk_reader_matches_original_even_inside_utf8_and_long_lines (test_pipeline.PipelineTests.test_chunk_reader_matches_original_even_inside_utf8_and_long_lines) ... ok
+test_empty_and_single_line_inputs_have_no_duplicate_lines (test_pipeline.PipelineTests.test_empty_and_single_line_inputs_have_no_duplicate_lines) ... ok
+test_full_pipeline_exact_bytes_and_idempotent_retry (test_pipeline.PipelineTests.test_full_pipeline_exact_bytes_and_idempotent_retry) ... ok
+test_new_partition_run_invalidates_old_final (test_pipeline.PipelineTests.test_new_partition_run_invalidates_old_final) ... ok
+test_reducer_rejects_missing_stale_and_corrupt_parts (test_pipeline.PipelineTests.test_reducer_rejects_missing_stale_and_corrupt_parts) ... ok
+test_short_read_fails_instead_of_skipping_data (test_pipeline.PipelineTests.test_short_read_fails_instead_of_skipping_data) ... ok
+test_cgroup_memory_peak_resolves_non_root_path (test_pipeline.UtilityTests.test_cgroup_memory_peak_resolves_non_root_path) ... ok
+test_job_templates_have_safe_lifecycle_and_consistent_env (test_pipeline.UtilityTests.test_job_templates_have_safe_lifecycle_and_consistent_env) ... ok
+test_memory_limit_derived_from_peak_and_new_job (test_pipeline.UtilityTests.test_memory_limit_derived_from_peak_and_new_job) ... ok
+test_mismatch_verifier_returns_failure (test_pipeline.UtilityTests.test_mismatch_verifier_returns_failure) ... ok
+test_pod_requests_include_init_sidecars_and_overhead (test_pipeline.UtilityTests.test_pod_requests_include_init_sidecars_and_overhead) ... ok
+test_scheduling_manifests_force_contention_without_node_name (test_pipeline.UtilityTests.test_scheduling_manifests_force_contention_without_node_name) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 4.021s
+
+OK (skipped=1)

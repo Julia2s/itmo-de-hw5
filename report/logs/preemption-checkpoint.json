@@ -1,0 +1,510 @@
+{
+  "victim": {
+    "apiVersion": "v1",
+    "kind": "Pod",
+    "metadata": {
+      "annotations": {
+        "batch.kubernetes.io/job-completion-index": "0"
+      },
+      "creationTimestamp": "2026-11-27T10:21:08Z",
+      "deletionGracePeriodSeconds": 10,
+      "deletionTimestamp": "2026-11-27T10:21:25Z",
+      "finalizers": [
+        "batch.kubernetes.io/job-tracking"
+      ],
+      "generateName": "low-map-0-",
+      "generation": 2,
+      "labels": {
+        "app": "skills-experiment",
+        "batch.kubernetes.io/controller-uid": "fcb1d38e-e3f2-47f2-8e70-1438a8c16b57",
+        "batch.kubernetes.io/job-completion-index": "0",
+        "batch.kubernetes.io/job-name": "low-map",
+        "controller-uid": "fcb1d38e-e3f2-47f2-8e70-1438a8c16b57",
+        "experiment": "low",
+        "job-name": "low-map"
+      },
+      "name": "low-map-0-46jpl",
+      "namespace": "hw5",
+      "ownerReferences": [
+        {
+          "apiVersion": "batch/v1",
+          "blockOwnerDeletion": true,
+          "controller": true,
+          "kind": "Job",
+          "name": "low-map",
+          "uid": "fcb1d38e-e3f2-47f2-8e70-1438a8c16b57"
+        }
+      ],
+      "resourceVersion": "3966",
+      "uid": "a9be9082-d27b-4b84-8e95-bfbf332beff6"
+    },
+    "spec": {
+      "automountServiceAccountToken": false,
+      "containers": [
+        {
+          "args": [
+            "--mode",
+            "part",
+            "--prefix",
+            "hw5/low",
+            "--pace-seconds",
+            "1.0"
+          ],
+          "command": [
+            "python",
+            "src/worker.py"
+          ],
+          "env": [
+            {
+              "name": "JOB_COMPLETION_INDEX",
+              "valueFrom": {
+                "fieldRef": {
+                  "apiVersion": "v1",
+                  "fieldPath": "metadata.annotations['batch.kubernetes.io/job-completion-index']"
+                }
+              }
+            }
+          ],
+          "envFrom": [
+            {
+              "configMapRef": {
+                "name": "hw5-config"
+              }
+            },
+            {
+              "secretRef": {
+                "name": "s3-credentials"
+              }
+            }
+          ],
+          "image": "hw5-skills:local",
+          "imagePullPolicy": "Never",
+          "name": "worker",
+          "resources": {
+            "limits": {
+              "cpu": "1680m",
+              "memory": "1Gi"
+            },
+            "requests": {
+              "cpu": "1680m",
+              "memory": "1Gi"
+            }
+          },
+          "terminationMessagePath": "/dev/termination-log",
+          "terminationMessagePolicy": "File"
+        }
+      ],
+      "dnsPolicy": "ClusterFirst",
+      "enableServiceLinks": true,
+      "hostname": "low-map-0",
+      "nodeName": "hw5",
+      "nodeSelector": {
+        "kubernetes.io/hostname": "hw5"
+      },
+      "preemptionPolicy": "PreemptLowerPriority",
+      "priority": -1000,
+      "priorityClassName": "hw5-low",
+      "restartPolicy": "Never",
+      "schedulerName": "default-scheduler",
+      "securityContext": {},
+      "serviceAccount": "default",
+      "serviceAccountName": "default",
+      "terminationGracePeriodSeconds": 10,
+      "tolerations": [
+        {
+          "effect": "NoExecute",
+          "key": "node.kubernetes.io/not-ready",
+          "operator": "Exists",
+          "tolerationSeconds": 300
+        },
+        {
+          "effect": "NoExecute",
+          "key": "node.kubernetes.io/unreachable",
+          "operator": "Exists",
+          "tolerationSeconds": 300
+        }
+      ]
+    },
+    "status": {
+      "allocatedResources": {
+        "cpu": "1680m",
+        "memory": "1Gi"
+      },
+      "conditions": [
+        {
+          "lastProbeTime": null,
+          "lastTransitionTime": "2026-11-27T10:21:15Z",
+          "message": "default-scheduler: preempting to accommodate a higher priority pod",
+          "observedGeneration": 1,
+          "reason": "PreemptionByScheduler",
+          "status": "True",
+          "type": "DisruptionTarget"
+        },
+        {
+          "lastProbeTime": null,
+          "lastTransitionTime": "2026-11-27T10:21:09Z",
+          "observedGeneration": 2,
+          "status": "True",
+          "type": "PodReadyToStartContainers"
+        },
+        {
+          "lastProbeTime": null,
+          "lastTransitionTime": "2026-11-27T10:21:08Z",
+          "observedGeneration": 2,
+          "status": "True",
+          "type": "Initialized"
+        },
+        {
+          "lastProbeTime": null,
+          "lastTransitionTime": "2026-11-27T10:21:09Z",
+          "observedGeneration": 2,
+          "status": "True",
+          "type": "Ready"
+        },
+        {
+          "lastProbeTime": null,
+          "lastTransitionTime": "2026-11-27T10:21:09Z",
+          "observedGeneration": 2,
+          "status": "True",
+          "type": "ContainersReady"
+        },
+        {
+          "lastProbeTime": null,
+          "lastTransitionTime": "2026-11-27T10:21:08Z",
+          "observedGeneration": 2,
+          "status": "True",
+          "type": "PodScheduled"
+        }
+      ],
+      "containerStatuses": [
+        {
+          "allocatedResources": {
+            "cpu": "1680m",
+            "memory": "1Gi"
+          },
+          "containerID": "containerd://9effc2816ebd41999ce92a50b5fdb284eb2491417197ea80defc00618fedd409",
+          "image": "docker.io/library/hw5-skills:local",
+          "imageID": "sha256:c22a2a0fc9c23d277c03cb3ac7ce84f1e9a689b33ba000c29c26f83dfa1d695d",
+          "lastState": {},
+          "name": "worker",
+          "ready": true,
+          "resources": {
+            "limits": {
+              "cpu": "1680m",
+              "memory": "1Gi"
+            },
+            "requests": {
+              "cpu": "1680m",
+              "memory": "1Gi"
+            }
+          },
+          "restartCount": 0,
+          "started": true,
+          "state": {
+            "running": {
+              "startedAt": "2026-11-27T10:21:09Z"
+            }
+          },
+          "user": {
+            "linux": {
+              "gid": 10001,
+              "supplementalGroups": [
+                10001
+              ],
+              "uid": 10001
+            }
+          }
+        }
+      ],
+      "hostIP": "192.168.49.2",
+      "hostIPs": [
+        {
+          "ip": "192.168.49.2"
+        }
+      ],
+      "observedGeneration": 2,
+      "phase": "Running",
+      "podIP": "10.244.0.30",
+      "podIPs": [
+        {
+          "ip": "10.244.0.30"
+        }
+      ],
+      "qosClass": "Guaranteed",
+      "resources": {
+        "limits": {
+          "cpu": "1680m",
+          "memory": "1Gi"
+        },
+        "requests": {
+          "cpu": "1680m",
+          "memory": "1Gi"
+        }
+      },
+      "startTime": "2026-11-27T10:21:08Z"
+    }
+  },
+  "event": {
+    "apiVersion": "v1",
+    "count": 1,
+    "eventTime": null,
+    "firstTimestamp": "2026-11-27T10:21:15Z",
+    "involvedObject": {
+      "apiVersion": "v1",
+      "kind": "Pod",
+      "name": "low-map-0-46jpl",
+      "namespace": "hw5",
+      "resourceVersion": "3950",
+      "uid": "a9be9082-d27b-4b84-8e95-bfbf332beff6"
+    },
+    "kind": "Event",
+    "lastTimestamp": "2026-11-27T10:21:15Z",
+    "message": "Preempted by pod 15e5e6e7-b94b-47a9-bf46-27463eefddd7 on node hw5",
+    "metadata": {
+      "creationTimestamp": "2026-11-27T10:21:15Z",
+      "name": "low-map-0-46jpl.18ebdfbc37cf46a7",
+      "namespace": "hw5",
+      "resourceVersion": "3964",
+      "uid": "66b3f485-fe46-423f-876a-a95fe1956736"
+    },
+    "reason": "Preempted",
+    "reportingComponent": "default-scheduler",
+    "reportingInstance": "",
+    "source": {
+      "component": "default-scheduler"
+    },
+    "type": "Normal"
+  },
+  "condition": {
+    "lastProbeTime": null,
+    "lastTransitionTime": "2026-11-27T10:21:15Z",
+    "message": "default-scheduler: preempting to accommodate a higher priority pod",
+    "observedGeneration": 1,
+    "reason": "PreemptionByScheduler",
+    "status": "True",
+    "type": "DisruptionTarget"
+  },
+  "urgent": {
+    "apiVersion": "v1",
+    "kind": "Pod",
+    "metadata": {
+      "creationTimestamp": "2026-11-27T10:21:15Z",
+      "generateName": "urgent-",
+      "generation": 1,
+      "labels": {
+        "app": "skills-experiment",
+        "batch.kubernetes.io/controller-uid": "2d110aab-861b-4f9a-b3a3-42b59550eecc",
+        "batch.kubernetes.io/job-name": "urgent",
+        "controller-uid": "2d110aab-861b-4f9a-b3a3-42b59550eecc",
+        "experiment": "urgent",
+        "job-name": "urgent"
+      },
+      "name": "urgent-prhtd",
+      "namespace": "hw5",
+      "ownerReferences": [
+        {
+          "apiVersion": "batch/v1",
+          "blockOwnerDeletion": true,
+          "controller": true,
+          "kind": "Job",
+          "name": "urgent",
+          "uid": "2d110aab-861b-4f9a-b3a3-42b59550eecc"
+        }
+      ],
+      "resourceVersion": "4017",
+      "uid": "15e5e6e7-b94b-47a9-bf46-27463eefddd7"
+    },
+    "spec": {
+      "automountServiceAccountToken": false,
+      "containers": [
+        {
+          "args": [
+            "--mode",
+            "sequential",
+            "--prefix",
+            "hw5/urgent"
+          ],
+          "command": [
+            "python",
+            "src/worker.py"
+          ],
+          "env": [
+            {
+              "name": "S3_ENDPOINT",
+              "value": "http://rustfs.hw5.svc.cluster.local:9000"
+            }
+          ],
+          "envFrom": [
+            {
+              "configMapRef": {
+                "name": "hw5-config"
+              }
+            },
+            {
+              "secretRef": {
+                "name": "s3-credentials"
+              }
+            }
+          ],
+          "image": "hw5-skills:local",
+          "imagePullPolicy": "Never",
+          "name": "worker",
+          "resources": {
+            "limits": {
+              "cpu": "1680m",
+              "memory": "1Gi"
+            },
+            "requests": {
+              "cpu": "1680m",
+              "memory": "1Gi"
+            }
+          },
+          "terminationMessagePath": "/dev/termination-log",
+          "terminationMessagePolicy": "File"
+        }
+      ],
+      "dnsPolicy": "ClusterFirst",
+      "enableServiceLinks": true,
+      "nodeName": "hw5",
+      "nodeSelector": {
+        "kubernetes.io/hostname": "hw5"
+      },
+      "preemptionPolicy": "PreemptLowerPriority",
+      "priority": -500,
+      "priorityClassName": "hw5-high",
+      "restartPolicy": "Never",
+      "schedulerName": "default-scheduler",
+      "securityContext": {},
+      "serviceAccount": "default",
+      "serviceAccountName": "default",
+      "terminationGracePeriodSeconds": 10,
+      "tolerations": [
+        {
+          "effect": "NoExecute",
+          "key": "node.kubernetes.io/not-ready",
+          "operator": "Exists",
+          "tolerationSeconds": 300
+        },
+        {
+          "effect": "NoExecute",
+          "key": "node.kubernetes.io/unreachable",
+          "operator": "Exists",
+          "tolerationSeconds": 300
+        }
+      ]
+    },
+    "status": {
+      "allocatedResources": {
+        "cpu": "1680m",
+        "memory": "1Gi"
+      },
+      "conditions": [
+        {
+          "lastProbeTime": null,
+          "lastTransitionTime": "2026-11-27T10:21:34Z",
+          "message": "pod sandbox is not ready",
+          "observedGeneration": 1,
+          "reason": "PodSandboxNotReady",
+          "status": "False",
+          "type": "PodReadyToStartContainers"
+        },
+        {
+          "lastProbeTime": null,
+          "lastTransitionTime": "2026-11-27T10:21:17Z",
+          "observedGeneration": 1,
+          "reason": "PodCompleted",
+          "status": "True",
+          "type": "Initialized"
+        },
+        {
+          "lastProbeTime": null,
+          "lastTransitionTime": "2026-11-27T10:21:33Z",
+          "observedGeneration": 1,
+          "reason": "PodCompleted",
+          "status": "False",
+          "type": "Ready"
+        },
+        {
+          "lastProbeTime": null,
+          "lastTransitionTime": "2026-11-27T10:21:33Z",
+          "observedGeneration": 1,
+          "reason": "PodCompleted",
+          "status": "False",
+          "type": "ContainersReady"
+        },
+        {
+          "lastProbeTime": null,
+          "lastTransitionTime": "2026-11-27T10:21:17Z",
+          "observedGeneration": 1,
+          "status": "True",
+          "type": "PodScheduled"
+        }
+      ],
+      "containerStatuses": [
+        {
+          "allocatedResources": {
+            "cpu": "1680m",
+            "memory": "1Gi"
+          },
+          "containerID": "containerd://444ff3726361ef46f2b2937f6c8ac78dcf081982cd50888e068ed07b88568f2e",
+          "image": "docker.io/library/hw5-skills:local",
+          "imageID": "sha256:c22a2a0fc9c23d277c03cb3ac7ce84f1e9a689b33ba000c29c26f83dfa1d695d",
+          "lastState": {},
+          "name": "worker",
+          "ready": false,
+          "resources": {
+            "limits": {
+              "cpu": "1680m",
+              "memory": "1Gi"
+            },
+            "requests": {
+              "cpu": "1680m",
+              "memory": "1Gi"
+            }
+          },
+          "restartCount": 0,
+          "started": false,
+          "state": {
+            "terminated": {
+              "containerID": "containerd://444ff3726361ef46f2b2937f6c8ac78dcf081982cd50888e068ed07b88568f2e",
+              "exitCode": 0,
+              "finishedAt": "2026-11-27T10:21:32Z",
+              "reason": "Completed",
+              "startedAt": "2026-11-27T10:21:17Z"
+            }
+          },
+          "user": {
+            "linux": {
+              "gid": 10001,
+              "supplementalGroups": [
+                10001
+              ],
+              "uid": 10001
+            }
+          }
+        }
+      ],
+      "hostIP": "192.168.49.2",
+      "hostIPs": [
+        {
+          "ip": "192.168.49.2"
+        }
+      ],
+      "observedGeneration": 1,
+      "phase": "Succeeded",
+      "podIP": "10.244.0.31",
+      "podIPs": [
+        {
+          "ip": "10.244.0.31"
+        }
+      ],
+      "qosClass": "Guaranteed",
+      "resources": {
+        "requests": {
+          "memory": "1Gi"
+        }
+      },
+      "startTime": "2026-11-27T10:21:17Z"
+    }
+  }
+}

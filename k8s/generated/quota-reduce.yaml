@@ -1,0 +1,44 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: quota-reduce
+  namespace: hw5-quota
+  labels:
+    app: skills-experiment
+    experiment: quota
+spec:
+  backoffLimit: 0
+  activeDeadlineSeconds: 900
+  template:
+    spec:
+      restartPolicy: Never
+      automountServiceAccountToken: false
+      containers:
+      - name: worker
+        image: hw5-skills:local
+        imagePullPolicy: Never
+        command:
+        - python
+        - src/reduce.py
+        args:
+        - --prefix
+        - hw5/quota
+        envFrom:
+        - configMapRef:
+            name: hw5-config
+        - secretRef:
+            name: s3-credentials
+        resources:
+          requests:
+            cpu: 500m
+            memory: 1Gi
+          limits:
+            cpu: 500m
+            memory: 1Gi
+      terminationGracePeriodSeconds: 10
+      nodeSelector:
+        kubernetes.io/hostname: hw5
+    metadata:
+      labels:
+        app: skills-experiment
+        experiment: quota

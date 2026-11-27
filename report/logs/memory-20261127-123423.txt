@@ -1,0 +1,56 @@
+﻿**********************
+Начало записи сценария Windows PowerShell
+Время начала: 20261127123423
+Имя пользователя: DESKTOP-3H8F2AH\julia
+Запуск от имени пользователя: DESKTOP-3H8F2AH\julia
+Имя конфигурации: 
+Компьютер: DESKTOP-3H8F2AH (Microsoft Windows NT 10.0.26300.0)
+Ведущее приложение: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -noexit -command try { . "c:\Users\Юлия\AppData\Local\Programs\Microsoft VS Code\661626d0e7\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+ИД процесса: 21652
+PSVersion: 5.1.26100.9818
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9818
+BuildVersion: 10.0.26100.9818
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+
+
+
+
+
+
+
+SCREENSHOT: report/screenshots/04-memory-baseline.png
+C:\Users\Юлия\Documents\itmo-de-hw5\k8s\generated/oom.yaml
+job.batch/skills-oom created
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  7s    default-scheduler  Successfully assigned hw5/skills-oom-chjht to hw5
+  Normal  Pulled     7s    kubelet            spec.containers{worker}: Container image "hw5-skills:local" already present on machine and can be accessed by the pod
+  Normal  Created    7s    kubelet            spec.containers{worker}: Container created
+  Normal  Started    7s    kubelet            spec.containers{worker}: Container started
+SCREENSHOT: report/screenshots/05-oomkilled.png
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SCREENSHOT: report/screenshots/06-memory-tuned.png
+**********************
+Конец записи протокола Windows PowerShell
+Время окончания: 20261127124934
+**********************

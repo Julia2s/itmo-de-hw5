@@ -1,0 +1,29 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: skills-baseline
+  namespace: hw5
+  labels: {experiment: baseline}
+spec:
+  backoffLimit: 0
+  activeDeadlineSeconds: 900
+  template:
+    metadata:
+      labels: {experiment: baseline}
+    spec:
+      restartPolicy: Never
+      automountServiceAccountToken: false
+      containers:
+        - name: worker
+          image: hw5-skills:local
+          imagePullPolicy: Never
+          command: [python, src/worker.py]
+          args: [--mode, sequential, --prefix, hw5/baseline]
+          env:
+            - {name: S3_ENDPOINT, value: 'http://host.docker.internal:9010'}
+          envFrom:
+            - configMapRef: {name: hw5-config}
+            - secretRef: {name: s3-credentials}
+          resources:
+            requests: {cpu: 500m, memory: 128Mi}
+            limits: {cpu: '1', memory: 1Gi}

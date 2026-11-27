@@ -1,0 +1,89 @@
+﻿apiVersion: batch/v1
+kind: Job
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"batch/v1","kind":"Job","metadata":{"annotations":{},"labels":{"app":"skills-experiment","experiment":"cpu"},"name":"cpu-reduce","namespace":"hw5"},"spec":{"activeDeadlineSeconds":900,"backoffLimit":0,"template":{"metadata":{"labels":{"app":"skills-experiment","experiment":"cpu"}},"spec":{"automountServiceAccountToken":false,"containers":[{"args":["--prefix","hw5/cpu"],"command":["python","src/reduce.py"],"envFrom":[{"configMapRef":{"name":"hw5-config"}},{"secretRef":{"name":"s3-credentials"}}],"image":"hw5-skills:local","imagePullPolicy":"Never","name":"worker","resources":{"limits":{"cpu":"500m","memory":"1Gi"},"requests":{"cpu":"500m","memory":"1Gi"}}}],"nodeSelector":{"kubernetes.io/hostname":"hw5"},"restartPolicy":"Never","terminationGracePeriodSeconds":10}}}}
+  creationTimestamp: "2026-11-27T10:14:22Z"
+  generation: 1
+  labels:
+    app: skills-experiment
+    experiment: cpu
+  name: cpu-reduce
+  namespace: hw5
+  resourceVersion: "3586"
+  uid: c63f1209-1a23-46a2-a45a-672651442dc6
+spec:
+  activeDeadlineSeconds: 900
+  backoffLimit: 0
+  completionMode: NonIndexed
+  completions: 1
+  manualSelector: false
+  parallelism: 1
+  podReplacementPolicy: TerminatingOrFailed
+  selector:
+    matchLabels:
+      batch.kubernetes.io/controller-uid: c63f1209-1a23-46a2-a45a-672651442dc6
+  suspend: false
+  template:
+    metadata:
+      labels:
+        app: skills-experiment
+        batch.kubernetes.io/controller-uid: c63f1209-1a23-46a2-a45a-672651442dc6
+        batch.kubernetes.io/job-name: cpu-reduce
+        controller-uid: c63f1209-1a23-46a2-a45a-672651442dc6
+        experiment: cpu
+        job-name: cpu-reduce
+    spec:
+      automountServiceAccountToken: false
+      containers:
+      - args:
+        - --prefix
+        - hw5/cpu
+        command:
+        - python
+        - src/reduce.py
+        envFrom:
+        - configMapRef:
+            name: hw5-config
+        - secretRef:
+            name: s3-credentials
+        image: hw5-skills:local
+        imagePullPolicy: Never
+        name: worker
+        resources:
+          limits:
+            cpu: 500m
+            memory: 1Gi
+          requests:
+            cpu: 500m
+            memory: 1Gi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      nodeSelector:
+        kubernetes.io/hostname: hw5
+      restartPolicy: Never
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 10
+status:
+  completionTime: "2026-11-27T10:14:35Z"
+  conditions:
+  - lastProbeTime: "2026-11-27T10:14:35Z"
+    lastTransitionTime: "2026-11-27T10:14:35Z"
+    message: Reached expected number of succeeded pods
+    reason: CompletionsReached
+    status: "True"
+    type: SuccessCriteriaMet
+  - lastProbeTime: "2026-11-27T10:14:35Z"
+    lastTransitionTime: "2026-11-27T10:14:35Z"
+    message: Reached expected number of succeeded pods
+    reason: CompletionsReached
+    status: "True"
+    type: Complete
+  ready: 0
+  startTime: "2026-11-27T10:14:22Z"
+  succeeded: 1
+  terminating: 0
+  uncountedTerminatedPods: {}

@@ -1,0 +1,44 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: quota-partition
+  namespace: hw5
+  labels:
+    app: skills-experiment
+    experiment: quota
+spec:
+  backoffLimit: 0
+  activeDeadlineSeconds: 900
+  template:
+    spec:
+      restartPolicy: Never
+      automountServiceAccountToken: false
+      containers:
+      - name: worker
+        image: hw5-skills:local
+        imagePullPolicy: Never
+        command:
+        - python
+        - src/partition.py
+        args:
+        - --parts
+        - '4'
+        - --prefix
+        - hw5/quota
+        envFrom:
+        - configMapRef:
+            name: hw5-config
+        - secretRef:
+            name: s3-credentials
+        resources:
+          requests:
+            cpu: 100m
+            memory: 256Mi
+          limits:
+            cpu: 100m
+            memory: 256Mi
+      terminationGracePeriodSeconds: 10
+    metadata:
+      labels:
+        app: skills-experiment
+        experiment: quota

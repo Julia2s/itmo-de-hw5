@@ -1,0 +1,96 @@
+﻿apiVersion: batch/v1
+kind: Job
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"batch/v1","kind":"Job","metadata":{"annotations":{},"name":"skills-parallel","namespace":"hw5"},"spec":{"activeDeadlineSeconds":900,"backoffLimit":0,"completionMode":"Indexed","completions":4,"parallelism":2,"template":{"spec":{"automountServiceAccountToken":false,"containers":[{"args":["--mode","part","--prefix","hw5/parallel"],"command":["python","src/worker.py"],"env":[{"name":"JOB_COMPLETION_INDEX","valueFrom":{"fieldRef":{"fieldPath":"metadata.annotations['batch.kubernetes.io/job-completion-index']"}}}],"envFrom":[{"configMapRef":{"name":"hw5-config"}},{"secretRef":{"name":"s3-credentials"}}],"image":"hw5-skills:local","imagePullPolicy":"Never","name":"worker","resources":{"limits":{"cpu":"1","memory":"1Gi"},"requests":{"cpu":"500m","memory":"128Mi"}}}],"restartPolicy":"Never"}}}}
+  creationTimestamp: "2026-11-27T09:55:35Z"
+  generation: 1
+  labels:
+    batch.kubernetes.io/controller-uid: 58799114-417b-49a7-b329-e9b4acccc662
+    batch.kubernetes.io/job-name: skills-parallel
+    controller-uid: 58799114-417b-49a7-b329-e9b4acccc662
+    job-name: skills-parallel
+  name: skills-parallel
+  namespace: hw5
+  resourceVersion: "2403"
+  uid: 58799114-417b-49a7-b329-e9b4acccc662
+spec:
+  activeDeadlineSeconds: 900
+  backoffLimit: 0
+  completionMode: Indexed
+  completions: 4
+  manualSelector: false
+  parallelism: 2
+  podReplacementPolicy: TerminatingOrFailed
+  selector:
+    matchLabels:
+      batch.kubernetes.io/controller-uid: 58799114-417b-49a7-b329-e9b4acccc662
+  suspend: false
+  template:
+    metadata:
+      labels:
+        batch.kubernetes.io/controller-uid: 58799114-417b-49a7-b329-e9b4acccc662
+        batch.kubernetes.io/job-name: skills-parallel
+        controller-uid: 58799114-417b-49a7-b329-e9b4acccc662
+        job-name: skills-parallel
+    spec:
+      automountServiceAccountToken: false
+      containers:
+      - args:
+        - --mode
+        - part
+        - --prefix
+        - hw5/parallel
+        command:
+        - python
+        - src/worker.py
+        env:
+        - name: JOB_COMPLETION_INDEX
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.annotations['batch.kubernetes.io/job-completion-index']
+        envFrom:
+        - configMapRef:
+            name: hw5-config
+        - secretRef:
+            name: s3-credentials
+        image: hw5-skills:local
+        imagePullPolicy: Never
+        name: worker
+        resources:
+          limits:
+            cpu: "1"
+            memory: 1Gi
+          requests:
+            cpu: 500m
+            memory: 128Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Never
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+status:
+  completedIndexes: 0-3
+  completionTime: "2026-11-27T09:55:56Z"
+  conditions:
+  - lastProbeTime: "2026-11-27T09:55:56Z"
+    lastTransitionTime: "2026-11-27T09:55:56Z"
+    message: Reached expected number of succeeded pods
+    reason: CompletionsReached
+    status: "True"
+    type: SuccessCriteriaMet
+  - lastProbeTime: "2026-11-27T09:55:56Z"
+    lastTransitionTime: "2026-11-27T09:55:56Z"
+    message: Reached expected number of succeeded pods
+    reason: CompletionsReached
+    status: "True"
+    type: Complete
+  ready: 0
+  startTime: "2026-11-27T09:55:35Z"
+  succeeded: 4
+  terminating: 0
+  uncountedTerminatedPods: {}

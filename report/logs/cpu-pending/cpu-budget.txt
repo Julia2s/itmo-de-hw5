@@ -1,0 +1,8 @@
+node=hw5
+allocatable_cpu=4
+used_requests_cpu=1.200
+free_cpu_m=2800
+request_each_m=1680
+one_fits=True; two_fit=False
+free_memory_mib=5212
+Snapshot only: regenerate if cluster workloads change.

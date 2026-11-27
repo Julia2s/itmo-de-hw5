@@ -1,0 +1,139 @@
+﻿2026-11-27T09:34:34.750813927Z MEMORY_SAMPLE={"rss_peak_mib": 24.01171875, "source": "cgroup_v1", "peak_mib": 14.890625, "memory_limit": "1073741824", "current_mib": 14.890625, "elapsed_s": 0.026}
+2026-11-27T09:34:35.820169303Z MEMORY_SAMPLE={"rss_peak_mib": 42.3125, "source": "cgroup_v1", "peak_mib": 36.75390625, "memory_limit": "1073741824", "current_mib": 34.58984375, "elapsed_s": 1.096}
+2026-11-27T09:34:36.075526023Z {"phase": "start", "mode": "sequential", "index": null, "run_id": null, "start": 0, "end": 847619384, "input": {"bucket": "hh-lake", "key": "raw/vacancies.csv", "size": 847619384, "etag": "efb65458995932747001aa004592d19c-102", "last_modified": "2026-11-06 10:26:58+00:00", "filter_mode": "role"}, "pace_seconds": 0}
+2026-11-27T09:34:36.822920373Z MEMORY_SAMPLE={"rss_peak_mib": 54.8203125, "source": "cgroup_v1", "peak_mib": 46.0859375, "memory_limit": "1073741824", "current_mib": 46.0859375, "elapsed_s": 2.099}
+2026-11-27T09:34:37.827576335Z MEMORY_SAMPLE={"rss_peak_mib": 88.07421875, "source": "cgroup_v1", "peak_mib": 79.20703125, "memory_limit": "1073741824", "current_mib": 64.7578125, "elapsed_s": 3.103}
+2026-11-27T09:34:38.832102052Z MEMORY_SAMPLE={"rss_peak_mib": 97.95703125, "source": "cgroup_v1", "peak_mib": 89.09375, "memory_limit": "1073741824", "current_mib": 80.8515625, "elapsed_s": 4.108}
+2026-11-27T09:34:39.837216374Z MEMORY_SAMPLE={"rss_peak_mib": 100.33984375, "source": "cgroup_v1", "peak_mib": 91.42578125, "memory_limit": "1073741824", "current_mib": 81.03515625, "elapsed_s": 5.113}
+2026-11-27T09:34:40.842463394Z MEMORY_SAMPLE={"rss_peak_mib": 105.4375, "source": "cgroup_v1", "peak_mib": 96.3515625, "memory_limit": "1073741824", "current_mib": 87.23046875, "elapsed_s": 6.118}
+2026-11-27T09:34:41.884645374Z MEMORY_SAMPLE={"rss_peak_mib": 106.22265625, "source": "cgroup_v1", "peak_mib": 97.34765625, "memory_limit": "1073741824", "current_mib": 88.1015625, "elapsed_s": 7.16}
+2026-11-27T09:34:42.887774412Z MEMORY_SAMPLE={"rss_peak_mib": 106.22265625, "source": "cgroup_v1", "peak_mib": 97.34765625, "memory_limit": "1073741824", "current_mib": 88.390625, "elapsed_s": 8.163}
+2026-11-27T09:34:43.890281349Z MEMORY_SAMPLE={"rss_peak_mib": 106.22265625, "source": "cgroup_v1", "peak_mib": 97.34765625, "memory_limit": "1073741824", "current_mib": 86.98828125, "elapsed_s": 9.166}
+2026-11-27T09:34:44.895177642Z MEMORY_SAMPLE={"rss_peak_mib": 114.328125, "source": "cgroup_v1", "peak_mib": 105.3671875, "memory_limit": "1073741824", "current_mib": 88.4375, "elapsed_s": 10.171}
+2026-11-27T09:34:45.897990647Z MEMORY_SAMPLE={"rss_peak_mib": 115.12109375, "source": "cgroup_v1", "peak_mib": 106.3515625, "memory_limit": "1073741824", "current_mib": 96.46875, "elapsed_s": 11.174}
+2026-11-27T09:34:46.900093258Z MEMORY_SAMPLE={"rss_peak_mib": 115.12109375, "source": "cgroup_v1", "peak_mib": 106.3515625, "memory_limit": "1073741824", "current_mib": 90.6171875, "elapsed_s": 12.176}
+2026-11-27T09:34:47.904751568Z MEMORY_SAMPLE={"rss_peak_mib": 115.12109375, "source": "cgroup_v1", "peak_mib": 106.3515625, "memory_limit": "1073741824", "current_mib": 91.203125, "elapsed_s": 13.181}
+2026-11-27T09:34:48.908033667Z MEMORY_SAMPLE={"rss_peak_mib": 116.9375, "source": "cgroup_v1", "peak_mib": 108.33203125, "memory_limit": "1073741824", "current_mib": 91.79296875, "elapsed_s": 14.184}
+2026-11-27T09:34:49.910276514Z MEMORY_SAMPLE={"rss_peak_mib": 117.2109375, "source": "cgroup_v1", "peak_mib": 108.91796875, "memory_limit": "1073741824", "current_mib": 85.76953125, "elapsed_s": 15.186}
+2026-11-27T09:34:50.929839102Z MEMORY_SAMPLE={"rss_peak_mib": 117.2109375, "source": "cgroup_v1", "peak_mib": 108.91796875, "memory_limit": "1073741824", "current_mib": 93.26171875, "elapsed_s": 16.205}
+2026-11-27T09:34:51.933242090Z MEMORY_SAMPLE={"rss_peak_mib": 120.40625, "source": "cgroup_v1", "peak_mib": 112.47265625, "memory_limit": "1073741824", "current_mib": 100.84375, "elapsed_s": 17.209}
+2026-11-27T09:34:52.942868194Z MEMORY_SAMPLE={"rss_peak_mib": 120.40625, "source": "cgroup_v1", "peak_mib": 112.47265625, "memory_limit": "1073741824", "current_mib": 88.84375, "elapsed_s": 18.218}
+2026-11-27T09:34:53.947321382Z MEMORY_SAMPLE={"rss_peak_mib": 120.40625, "source": "cgroup_v1", "peak_mib": 112.47265625, "memory_limit": "1073741824", "current_mib": 92.1796875, "elapsed_s": 19.223}
+2026-11-27T09:34:54.950823223Z MEMORY_SAMPLE={"rss_peak_mib": 120.40625, "source": "cgroup_v1", "peak_mib": 112.47265625, "memory_limit": "1073741824", "current_mib": 92.37109375, "elapsed_s": 20.227}
+2026-11-27T09:34:55.955818801Z MEMORY_SAMPLE={"rss_peak_mib": 120.48828125, "source": "cgroup_v1", "peak_mib": 112.47265625, "memory_limit": "1073741824", "current_mib": 89.33984375, "elapsed_s": 21.231}
+2026-11-27T09:34:56.960417756Z MEMORY_SAMPLE={"rss_peak_mib": 120.48828125, "source": "cgroup_v1", "peak_mib": 112.47265625, "memory_limit": "1073741824", "current_mib": 97.5390625, "elapsed_s": 22.236}
+2026-11-27T09:34:57.963463013Z MEMORY_SAMPLE={"rss_peak_mib": 120.48828125, "source": "cgroup_v1", "peak_mib": 112.47265625, "memory_limit": "1073741824", "current_mib": 98.0, "elapsed_s": 23.239}
+2026-11-27T09:34:58.974510086Z MEMORY_SAMPLE={"rss_peak_mib": 122.3046875, "source": "cgroup_v1", "peak_mib": 114.8671875, "memory_limit": "1073741824", "current_mib": 103.05078125, "elapsed_s": 24.243}
+2026-11-27T09:35:02.711809760Z MEMORY_SAMPLE={"rss_peak_mib": 122.3046875, "source": "cgroup_v1", "peak_mib": 114.8671875, "memory_limit": "1073741824", "current_mib": 96.80859375, "elapsed_s": 25.248}
+2026-11-27T09:35:03.723920234Z MEMORY_SAMPLE={"rss_peak_mib": 122.3046875, "source": "cgroup_v1", "peak_mib": 114.8671875, "memory_limit": "1073741824", "current_mib": 88.85546875, "elapsed_s": 26.261}
+2026-11-27T09:35:04.728548020Z MEMORY_SAMPLE={"rss_peak_mib": 122.3046875, "source": "cgroup_v1", "peak_mib": 114.8671875, "memory_limit": "1073741824", "current_mib": 88.75, "elapsed_s": 27.265}
+2026-11-27T09:35:05.736181746Z MEMORY_SAMPLE={"rss_peak_mib": 122.3046875, "source": "cgroup_v1", "peak_mib": 114.8671875, "memory_limit": "1073741824", "current_mib": 91.0703125, "elapsed_s": 28.273}
+2026-11-27T09:35:06.740884444Z MEMORY_SAMPLE={"rss_peak_mib": 122.3046875, "source": "cgroup_v1", "peak_mib": 114.8671875, "memory_limit": "1073741824", "current_mib": 94.66796875, "elapsed_s": 29.278}
+2026-11-27T09:35:07.746260009Z MEMORY_SAMPLE={"rss_peak_mib": 122.3046875, "source": "cgroup_v1", "peak_mib": 114.8671875, "memory_limit": "1073741824", "current_mib": 94.88671875, "elapsed_s": 30.283}
+2026-11-27T09:35:08.748763354Z MEMORY_SAMPLE={"rss_peak_mib": 131.01953125, "source": "cgroup_v1", "peak_mib": 122.2734375, "memory_limit": "1073741824", "current_mib": 111.05859375, "elapsed_s": 31.286}
+2026-11-27T09:35:09.752388401Z MEMORY_SAMPLE={"rss_peak_mib": 131.01953125, "source": "cgroup_v1", "peak_mib": 122.31640625, "memory_limit": "1073741824", "current_mib": 95.4296875, "elapsed_s": 32.289}
+2026-11-27T09:35:10.757255904Z MEMORY_SAMPLE={"rss_peak_mib": 131.01953125, "source": "cgroup_v1", "peak_mib": 122.31640625, "memory_limit": "1073741824", "current_mib": 103.45703125, "elapsed_s": 33.294}
+2026-11-27T09:35:11.761651612Z MEMORY_SAMPLE={"rss_peak_mib": 131.01953125, "source": "cgroup_v1", "peak_mib": 122.31640625, "memory_limit": "1073741824", "current_mib": 103.83203125, "elapsed_s": 34.298}
+2026-11-27T09:35:12.768005192Z MEMORY_SAMPLE={"rss_peak_mib": 131.01953125, "source": "cgroup_v1", "peak_mib": 122.31640625, "memory_limit": "1073741824", "current_mib": 104.07421875, "elapsed_s": 35.305}
+2026-11-27T09:35:13.773162624Z MEMORY_SAMPLE={"rss_peak_mib": 133.15234375, "source": "cgroup_v1", "peak_mib": 124.515625, "memory_limit": "1073741824", "current_mib": 114.63671875, "elapsed_s": 36.31}
+2026-11-27T09:35:14.779189897Z MEMORY_SAMPLE={"rss_peak_mib": 133.15234375, "source": "cgroup_v1", "peak_mib": 124.515625, "memory_limit": "1073741824", "current_mib": 114.70703125, "elapsed_s": 37.316}
+2026-11-27T09:35:15.807730599Z MEMORY_SAMPLE={"rss_peak_mib": 133.15234375, "source": "cgroup_v1", "peak_mib": 124.515625, "memory_limit": "1073741824", "current_mib": 122.73828125, "elapsed_s": 38.345}
+2026-11-27T09:35:16.829547689Z MEMORY_SAMPLE={"rss_peak_mib": 133.15234375, "source": "cgroup_v1", "peak_mib": 124.515625, "memory_limit": "1073741824", "current_mib": 122.98828125, "elapsed_s": 39.366}
+2026-11-27T09:35:17.899827088Z MEMORY_SAMPLE={"rss_peak_mib": 133.15234375, "source": "cgroup_v1", "peak_mib": 124.515625, "memory_limit": "1073741824", "current_mib": 107.2578125, "elapsed_s": 40.436}
+2026-11-27T09:35:18.904889833Z MEMORY_SAMPLE={"rss_peak_mib": 133.15234375, "source": "cgroup_v1", "peak_mib": 124.515625, "memory_limit": "1073741824", "current_mib": 123.1875, "elapsed_s": 41.442}
+2026-11-27T09:35:19.909280322Z MEMORY_SAMPLE={"rss_peak_mib": 133.15234375, "source": "cgroup_v1", "peak_mib": 124.515625, "memory_limit": "1073741824", "current_mib": 115.6640625, "elapsed_s": 42.446}
+2026-11-27T09:35:20.915747369Z MEMORY_SAMPLE={"rss_peak_mib": 133.15234375, "source": "cgroup_v1", "peak_mib": 124.515625, "memory_limit": "1073741824", "current_mib": 123.81640625, "elapsed_s": 43.453}
+2026-11-27T09:35:21.966873354Z MEMORY_SAMPLE={"rss_peak_mib": 133.15234375, "source": "cgroup_v1", "peak_mib": 124.515625, "memory_limit": "1073741824", "current_mib": 123.8828125, "elapsed_s": 44.504}
+2026-11-27T09:35:23.050436389Z MEMORY_SAMPLE={"rss_peak_mib": 133.15234375, "source": "cgroup_v1", "peak_mib": 124.515625, "memory_limit": "1073741824", "current_mib": 124.11328125, "elapsed_s": 45.587}
+2026-11-27T09:35:24.055438471Z MEMORY_SAMPLE={"rss_peak_mib": 133.15234375, "source": "cgroup_v1", "peak_mib": 124.515625, "memory_limit": "1073741824", "current_mib": 108.03515625, "elapsed_s": 46.591}
+2026-11-27T09:35:25.057219951Z MEMORY_SAMPLE={"rss_peak_mib": 133.15234375, "source": "cgroup_v1", "peak_mib": 124.515625, "memory_limit": "1073741824", "current_mib": 108.421875, "elapsed_s": 47.594}
+2026-11-27T09:35:26.059587394Z MEMORY_SAMPLE={"rss_peak_mib": 133.28515625, "source": "cgroup_v1", "peak_mib": 124.55078125, "memory_limit": "1073741824", "current_mib": 108.4765625, "elapsed_s": 48.596}
+2026-11-27T09:35:27.063380826Z MEMORY_SAMPLE={"rss_peak_mib": 133.44921875, "source": "cgroup_v1", "peak_mib": 124.65234375, "memory_limit": "1073741824", "current_mib": 116.640625, "elapsed_s": 49.6}
+2026-11-27T09:35:28.066651158Z MEMORY_SAMPLE={"rss_peak_mib": 133.44921875, "source": "cgroup_v1", "peak_mib": 124.76953125, "memory_limit": "1073741824", "current_mib": 124.7109375, "elapsed_s": 50.603}
+2026-11-27T09:35:29.158484910Z MEMORY_SAMPLE={"rss_peak_mib": 133.59375, "source": "cgroup_v1", "peak_mib": 124.97265625, "memory_limit": "1073741824", "current_mib": 117.21875, "elapsed_s": 51.695}
+2026-11-27T09:35:30.162320873Z MEMORY_SAMPLE={"rss_peak_mib": 134.046875, "source": "cgroup_v1", "peak_mib": 125.22265625, "memory_limit": "1073741824", "current_mib": 125.22265625, "elapsed_s": 52.699}
+2026-11-27T09:35:31.167077628Z MEMORY_SAMPLE={"rss_peak_mib": 134.046875, "source": "cgroup_v1", "peak_mib": 125.22265625, "memory_limit": "1073741824", "current_mib": 117.21875, "elapsed_s": 53.704}
+2026-11-27T09:35:34.896400920Z MEMORY_SAMPLE={"rss_peak_mib": 134.046875, "source": "cgroup_v1", "peak_mib": 125.2421875, "memory_limit": "1073741824", "current_mib": 125.23828125, "elapsed_s": 54.706}
+2026-11-27T09:35:35.901378648Z MEMORY_SAMPLE={"rss_peak_mib": 134.046875, "source": "cgroup_v1", "peak_mib": 125.36328125, "memory_limit": "1073741824", "current_mib": 117.3046875, "elapsed_s": 55.711}
+2026-11-27T09:35:36.903722337Z MEMORY_SAMPLE={"rss_peak_mib": 134.18359375, "source": "cgroup_v1", "peak_mib": 125.36328125, "memory_limit": "1073741824", "current_mib": 125.33984375, "elapsed_s": 56.714}
+2026-11-27T09:35:37.906754437Z MEMORY_SAMPLE={"rss_peak_mib": 134.18359375, "source": "cgroup_v1", "peak_mib": 125.3828125, "memory_limit": "1073741824", "current_mib": 117.63671875, "elapsed_s": 57.717}
+2026-11-27T09:35:38.911930520Z MEMORY_SAMPLE={"rss_peak_mib": 134.3203125, "source": "cgroup_v1", "peak_mib": 125.58203125, "memory_limit": "1073741824", "current_mib": 125.578125, "elapsed_s": 58.722}
+2026-11-27T09:35:39.914330303Z MEMORY_SAMPLE={"rss_peak_mib": 134.3203125, "source": "cgroup_v1", "peak_mib": 125.58984375, "memory_limit": "1073741824", "current_mib": 109.80078125, "elapsed_s": 59.724}
+2026-11-27T09:35:41.101162262Z MEMORY_SAMPLE={"rss_peak_mib": 134.3203125, "source": "cgroup_v1", "peak_mib": 125.58984375, "memory_limit": "1073741824", "current_mib": 98.1328125, "elapsed_s": 60.911}
+2026-11-27T09:35:41.839520512Z {
+2026-11-27T09:35:41.839552412Z   "run_id": null,
+2026-11-27T09:35:41.839555470Z   "index": null,
+2026-11-27T09:35:41.839558776Z   "input": {
+2026-11-27T09:35:41.839561870Z     "bucket": "hh-lake",
+2026-11-27T09:35:41.839566021Z     "key": "raw/vacancies.csv",
+2026-11-27T09:35:41.839568849Z     "size": 847619384,
+2026-11-27T09:35:41.839572412Z     "etag": "efb65458995932747001aa004592d19c-102",
+2026-11-27T09:35:41.839575497Z     "last_modified": "2026-11-06 10:26:58+00:00",
+2026-11-27T09:35:41.839578628Z     "filter_mode": "role"
+2026-11-27T09:35:41.839581521Z   },
+2026-11-27T09:35:41.839584367Z   "start": 0,
+2026-11-27T09:35:41.839591438Z   "end": 847619384,
+2026-11-27T09:35:41.839594330Z   "stats": {
+2026-11-27T09:35:41.839597131Z     "lines_total": 229389,
+2026-11-27T09:35:41.839599922Z     "lines_prefiltered": 5784,
+2026-11-27T09:35:41.839603356Z     "lines_passed_prefilter": 5158,
+2026-11-27T09:35:41.839606084Z     "lines_with_skills": 3534,
+2026-11-27T09:35:41.839608958Z     "lines_malformed": 0,
+2026-11-27T09:35:41.839611777Z     "events_per_k": {
+2026-11-27T09:35:41.839614531Z       "1": 28336,
+2026-11-27T09:35:41.839619114Z       "2": 134651,
+2026-11-27T09:35:41.839621969Z       "3": 506549
+2026-11-27T09:35:41.839624770Z     }
+2026-11-27T09:35:41.839627727Z   },
+2026-11-27T09:35:41.839630491Z   "sha256": {
+2026-11-27T09:35:41.839633971Z     "skills_1.csv": "21cd3f212d9a0f5fc670b7c3e245f69ebddc53b76eef0ff9dd4919eaff9bbf16",
+2026-11-27T09:35:41.839636937Z     "skills_2.csv": "51ca84a101669e4384fecc072e4702d208e371873b4fd97063ac343b53fe5a82",
+2026-11-27T09:35:41.839639719Z     "skills_3.csv": "072f5ee88cd65cee8126578bef39a8a6e5f0a2658ce44aec82d3715e23ae7652"
+2026-11-27T09:35:41.839642520Z   },
+2026-11-27T09:35:41.839645311Z   "results": {
+2026-11-27T09:35:41.839648103Z     "1": {
+2026-11-27T09:35:41.839650885Z       "n_combinations": 1401,
+2026-11-27T09:35:41.839653649Z       "total_frequency": 28336,
+2026-11-27T09:35:41.839656394Z       "top": [
+2026-11-27T09:35:41.839659158Z         [
+2026-11-27T09:35:41.839661996Z           "linux"
+2026-11-27T09:35:41.839664778Z         ],
+2026-11-27T09:35:41.839667505Z         2190
+2026-11-27T09:35:41.839670223Z       ],
+2026-11-27T09:35:41.839672923Z       "s3_key": "hw5/measure-1/skills_1.csv",
+2026-11-27T09:35:41.839675797Z       "local_path": "data/results_hw5/skills_1.csv"
+2026-11-27T09:35:41.839678497Z     },
+2026-11-27T09:35:41.839681159Z     "2": {
+2026-11-27T09:35:41.839683813Z       "n_combinations": 20454,
+2026-11-27T09:35:41.839686494Z       "total_frequency": 134651,
+2026-11-27T09:35:41.839689139Z       "top": [
+2026-11-27T09:35:41.839691802Z         [
+2026-11-27T09:35:41.839694474Z           "docker",
+2026-11-27T09:35:41.839697128Z           "kubernetes"
+2026-11-27T09:35:41.839716916Z         ],
+2026-11-27T09:35:41.839719606Z         1251
+2026-11-27T09:35:41.839722242Z       ],
+2026-11-27T09:35:41.839724905Z       "s3_key": "hw5/measure-1/skills_2.csv",
+2026-11-27T09:35:41.839727540Z       "local_path": "data/results_hw5/skills_2.csv"
+2026-11-27T09:35:41.839730240Z     },
+2026-11-27T09:35:41.839732866Z     "3": {
+2026-11-27T09:35:41.839735483Z       "n_combinations": 144024,
+2026-11-27T09:35:41.839738183Z       "total_frequency": 506549,
+2026-11-27T09:35:41.839740781Z       "top": [
+2026-11-27T09:35:41.839743389Z         [
+2026-11-27T09:35:41.839746015Z           "docker",
+2026-11-27T09:35:41.839748623Z           "kubernetes",
+2026-11-27T09:35:41.839751231Z           "linux"
+2026-11-27T09:35:41.839753839Z         ],
+2026-11-27T09:35:41.839756456Z         804
+2026-11-27T09:35:41.839759063Z       ],
+2026-11-27T09:35:41.839761690Z       "s3_key": "hw5/measure-1/skills_3.csv",
+2026-11-27T09:35:41.839764389Z       "local_path": "data/results_hw5/skills_3.csv"
+2026-11-27T09:35:41.839767015Z     }
+2026-11-27T09:35:41.839769642Z   },
+2026-11-27T09:35:41.839772286Z   "pace_seconds": 0,
+2026-11-27T09:35:41.839774922Z   "elapsed_s": 60.292
+2026-11-27T09:35:41.839777566Z }
+2026-11-27T09:35:41.839780229Z WORKER_COMPLETE
+2026-11-27T09:35:41.875389183Z MEMORY_METRICS={"rss_peak_mib": 134.3203125, "source": "cgroup_v1", "peak_mib": 129.1875, "memory_limit": "1073741824", "current_mib": 124.23046875}
+2026-11-27T09:35:41.875474001Z MEMORY_PEAK_MIB=129.187500

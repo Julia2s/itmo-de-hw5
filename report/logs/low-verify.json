@@ -1,0 +1,77 @@
+{
+  "ok": true,
+  "checks": {
+    "skills_1.csv": {
+      "rows": 1401,
+      "expected_rows": 1401,
+      "total_frequency": 28336,
+      "expected_total_frequency": 28336,
+      "top10_match": true,
+      "full_match": true,
+      "sha256_match": true,
+      "sha256": "21cd3f212d9a0f5fc670b7c3e245f69ebddc53b76eef0ff9dd4919eaff9bbf16"
+    },
+    "skills_2.csv": {
+      "rows": 20454,
+      "expected_rows": 20454,
+      "total_frequency": 134651,
+      "expected_total_frequency": 134651,
+      "top10_match": true,
+      "full_match": true,
+      "sha256_match": true,
+      "sha256": "51ca84a101669e4384fecc072e4702d208e371873b4fd97063ac343b53fe5a82",
+      "top10": [
+        [
+          "docker;kubernetes",
+          1251
+        ],
+        [
+          "docker;linux",
+          1208
+        ],
+        [
+          "kubernetes;linux",
+          1162
+        ],
+        [
+          "ansible;linux",
+          871
+        ],
+        [
+          "devops;linux",
+          842
+        ],
+        [
+          "devops;kubernetes",
+          816
+        ],
+        [
+          "devops;docker",
+          813
+        ],
+        [
+          "ansible;docker",
+          786
+        ],
+        [
+          "ansible;kubernetes",
+          772
+        ],
+        [
+          "linux;python",
+          738
+        ]
+      ]
+    },
+    "skills_3.csv": {
+      "rows": 144024,
+      "expected_rows": 144024,
+      "total_frequency": 506549,
+      "expected_total_frequency": 506549,
+      "top10_match": true,
+      "full_match": true,
+      "sha256_match": true,
+      "sha256": "072f5ee88cd65cee8126578bef39a8a6e5f0a2658ce44aec82d3715e23ae7652"
+    }
+  }
+}

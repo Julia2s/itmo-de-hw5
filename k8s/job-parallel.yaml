@@ -1,0 +1,32 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: skills-parallel
+  namespace: hw5
+spec:
+  completionMode: Indexed
+  completions: 4
+  parallelism: 2
+  backoffLimit: 0
+  activeDeadlineSeconds: 900
+  template:
+    spec:
+      restartPolicy: Never
+      automountServiceAccountToken: false
+      containers:
+        - name: worker
+          image: hw5-skills:local
+          imagePullPolicy: Never
+          command: [python, src/worker.py]
+          args: [--mode, part, --prefix, hw5/parallel]
+          env:
+            - name: JOB_COMPLETION_INDEX
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.annotations['batch.kubernetes.io/job-completion-index']
+          envFrom:
+            - configMapRef: {name: hw5-config}
+            - secretRef: {name: s3-credentials}
+          resources:
+            requests: {cpu: 500m, memory: 128Mi}
+            limits: {cpu: '1', memory: 1Gi}

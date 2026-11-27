@@ -1,0 +1,47 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: measure-3
+  namespace: hw5
+  labels:
+    app: skills-experiment
+    experiment: measure-3
+spec:
+  backoffLimit: 0
+  activeDeadlineSeconds: 900
+  template:
+    metadata:
+      labels:
+        app: skills-experiment
+        experiment: measure-3
+    spec:
+      restartPolicy: Never
+      automountServiceAccountToken: false
+      containers:
+      - name: worker
+        image: hw5-skills:local
+        imagePullPolicy: Never
+        command:
+        - python
+        - src/worker.py
+        args:
+        - --mode
+        - sequential
+        - --prefix
+        - hw5/measure-3
+        env:
+        - name: S3_ENDPOINT
+          value: http://host.docker.internal:9010
+        envFrom:
+        - configMapRef:
+            name: hw5-config
+        - secretRef:
+            name: s3-credentials
+        resources:
+          requests:
+            cpu: 500m
+            memory: 1Gi
+          limits:
+            cpu: '1'
+            memory: 1Gi
+      terminationGracePeriodSeconds: 10

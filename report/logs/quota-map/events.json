@@ -1,0 +1,994 @@
+﻿{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-27T10:25:42Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "quota-map-0-wzdlj",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4334",
+                "uid": "ce61dc3d-0fda-4c74-aa36-13ece1601095"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-27T10:25:42Z",
+            "message": "Successfully assigned hw5-quota/quota-map-0-wzdlj to hw5",
+            "metadata": {
+                "creationTimestamp": "2026-11-27T10:25:42Z",
+                "name": "quota-map-0-wzdlj.18ebdffa45fabac9",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4337",
+                "uid": "e7b35505-dcb8-463b-86e5-c6be86ee3df3"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-27T10:25:42Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "quota-map-0-wzdlj",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4335",
+                "uid": "ce61dc3d-0fda-4c74-aa36-13ece1601095"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-27T10:25:42Z",
+            "message": "Container image \"hw5-skills:local\" already present on machine and can be accessed by the pod",
+            "metadata": {
+                "creationTimestamp": "2026-11-27T10:25:42Z",
+                "name": "quota-map-0-wzdlj.18ebdffa50981e35",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4341",
+                "uid": "08f8f333-9e2e-42c9-a926-1960bf4c677c"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw5",
+            "source": {
+                "component": "kubelet",
+                "host": "hw5"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-27T10:25:42Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "quota-map-0-wzdlj",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4335",
+                "uid": "ce61dc3d-0fda-4c74-aa36-13ece1601095"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-27T10:25:42Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-11-27T10:25:42Z",
+                "name": "quota-map-0-wzdlj.18ebdffa5820020f",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4343",
+                "uid": "140155b0-dc73-4e0a-8a1a-93e11b1b394d"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw5",
+            "source": {
+                "component": "kubelet",
+                "host": "hw5"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-27T10:25:42Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "quota-map-0-wzdlj",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4335",
+                "uid": "ce61dc3d-0fda-4c74-aa36-13ece1601095"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-27T10:25:42Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-11-27T10:25:42Z",
+                "name": "quota-map-0-wzdlj.18ebdffa5c0f714d",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4344",
+                "uid": "020f4be2-4a3e-4151-bcff-a8b757a67483"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw5",
+            "source": {
+                "component": "kubelet",
+                "host": "hw5"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-27T10:26:21Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "quota-map-1-pzdbx",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4391",
+                "uid": "f6eba7ac-1808-40bb-9fe0-8106ee80b7bb"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-27T10:26:21Z",
+            "message": "Successfully assigned hw5-quota/quota-map-1-pzdbx to hw5",
+            "metadata": {
+                "creationTimestamp": "2026-11-27T10:26:21Z",
+                "name": "quota-map-1-pzdbx.18ebe003689314dc",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4395",
+                "uid": "0d39b85e-bbe0-40a3-a1be-15b000b50599"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-27T10:26:21Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "quota-map-1-pzdbx",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4392",
+                "uid": "f6eba7ac-1808-40bb-9fe0-8106ee80b7bb"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-27T10:26:21Z",
+            "message": "Container image \"hw5-skills:local\" already present on machine and can be accessed by the pod",
+            "metadata": {
+                "creationTimestamp": "2026-11-27T10:26:21Z",
+                "name": "quota-map-1-pzdbx.18ebe003720d6d46",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4399",
+                "uid": "ecb21ec5-b1e7-41de-8df7-9f466c82f76b"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw5",
+            "source": {
+                "component": "kubelet",
+                "host": "hw5"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-27T10:26:21Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "quota-map-1-pzdbx",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4392",
+                "uid": "f6eba7ac-1808-40bb-9fe0-8106ee80b7bb"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-27T10:26:21Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-11-27T10:26:21Z",
+                "name": "quota-map-1-pzdbx.18ebe0037416aa2d",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4401",
+                "uid": "80aeb750-d287-4ec3-b61a-8e1eb3bda11c"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw5",
+            "source": {
+                "component": "kubelet",
+                "host": "hw5"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-27T10:26:21Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "quota-map-1-pzdbx",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4392",
+                "uid": "f6eba7ac-1808-40bb-9fe0-8106ee80b7bb"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-27T10:26:21Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-11-27T10:26:21Z",
+                "name": "quota-map-1-pzdbx.18ebe00377be2d7a",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4402",
+                "uid": "1ee41a5e-771a-4774-868b-81d979a18659"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw5",
+            "source": {
+                "component": "kubelet",
+                "host": "hw5"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-27T10:26:58Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "quota-map-2-2dg6b",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4445",
+                "uid": "774a51a6-c61f-4b35-9f21-9db9707f838d"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-27T10:26:58Z",
+            "message": "Successfully assigned hw5-quota/quota-map-2-2dg6b to hw5",
+            "metadata": {
+                "creationTimestamp": "2026-11-27T10:26:58Z",
+                "name": "quota-map-2-2dg6b.18ebe00c0195a9d6",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4450",
+                "uid": "b1ea9e67-7386-4220-939f-e48865b57c7e"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-27T10:26:58Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "quota-map-2-2dg6b",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4447",
+                "uid": "774a51a6-c61f-4b35-9f21-9db9707f838d"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-27T10:26:58Z",
+            "message": "Container image \"hw5-skills:local\" already present on machine and can be accessed by the pod",
+            "metadata": {
+                "creationTimestamp": "2026-11-27T10:26:58Z",
+                "name": "quota-map-2-2dg6b.18ebe00c0a8bc9a6",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4453",
+                "uid": "c2015844-a1e5-4a03-bbb2-1a7541133f47"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw5",
+            "source": {
+                "component": "kubelet",
+                "host": "hw5"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-27T10:26:58Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "quota-map-2-2dg6b",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4447",
+                "uid": "774a51a6-c61f-4b35-9f21-9db9707f838d"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-27T10:26:58Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-11-27T10:26:58Z",
+                "name": "quota-map-2-2dg6b.18ebe00c0c7a21fb",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4455",
+                "uid": "a825d461-c3ab-4ce2-a15d-23ab11a00056"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw5",
+            "source": {
+                "component": "kubelet",
+                "host": "hw5"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-27T10:26:58Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "quota-map-2-2dg6b",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4447",
+                "uid": "774a51a6-c61f-4b35-9f21-9db9707f838d"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-27T10:26:58Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-11-27T10:26:58Z",
+                "name": "quota-map-2-2dg6b.18ebe00c0fc52315",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4456",
+                "uid": "dcae4b5e-06f4-4fa0-8835-91825bf8d412"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw5",
+            "source": {
+                "component": "kubelet",
+                "host": "hw5"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-27T10:27:35Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "quota-map-3-v2z54",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4497",
+                "uid": "feb30b95-f2b9-49d2-b42b-efbfcf16d74f"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-27T10:27:35Z",
+            "message": "Successfully assigned hw5-quota/quota-map-3-v2z54 to hw5",
+            "metadata": {
+                "creationTimestamp": "2026-11-27T10:27:35Z",
+                "name": "quota-map-3-v2z54.18ebe01497a7e027",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4501",
+                "uid": "6d36a844-5fa3-46b4-bf0c-07a729677041"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-27T10:27:35Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "quota-map-3-v2z54",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4499",
+                "uid": "feb30b95-f2b9-49d2-b42b-efbfcf16d74f"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-27T10:27:35Z",
+            "message": "Container image \"hw5-skills:local\" already present on machine and can be accessed by the pod",
+            "metadata": {
+                "creationTimestamp": "2026-11-27T10:27:35Z",
+                "name": "quota-map-3-v2z54.18ebe014a19c2439",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4504",
+                "uid": "9648443c-bc37-4f99-8485-a633b40bbfe3"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw5",
+            "source": {
+                "component": "kubelet",
+                "host": "hw5"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-27T10:27:35Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "quota-map-3-v2z54",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4499",
+                "uid": "feb30b95-f2b9-49d2-b42b-efbfcf16d74f"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-27T10:27:35Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-11-27T10:27:35Z",
+                "name": "quota-map-3-v2z54.18ebe014a387fdbf",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4506",
+                "uid": "37a87e90-b59a-421a-bb3a-422111cb1e72"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw5",
+            "source": {
+                "component": "kubelet",
+                "host": "hw5"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-27T10:27:35Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{worker}",
+                "kind": "Pod",
+                "name": "quota-map-3-v2z54",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4499",
+                "uid": "feb30b95-f2b9-49d2-b42b-efbfcf16d74f"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-27T10:27:35Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-11-27T10:27:35Z",
+                "name": "quota-map-3-v2z54.18ebe014a74a7fe5",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4507",
+                "uid": "b6f29449-ff9e-41a2-b3fe-de9f20898531"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "hw5",
+            "source": {
+                "component": "kubelet",
+                "host": "hw5"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-27T10:25:42Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "quota-map",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4332",
+                "uid": "d564fcf9-ece5-450e-a396-1f915767b3e0"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-27T10:25:42Z",
+            "message": "Created pod: quota-map-0-wzdlj",
+            "metadata": {
+                "creationTimestamp": "2026-11-27T10:25:42Z",
+                "name": "quota-map.18ebdffa457f2bf6",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4336",
+                "uid": "073fb15c-ae37-4846-86a2-7143fe8929de"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-27T10:25:42Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "quota-map",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4332",
+                "uid": "d564fcf9-ece5-450e-a396-1f915767b3e0"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-27T10:25:42Z",
+            "message": "Error creating: pods \"quota-map-1-4cwgm\" is forbidden: exceeded quota: hw5-quota, requested: requests.cpu=600m, used: requests.cpu=600m, limited: requests.cpu=1",
+            "metadata": {
+                "creationTimestamp": "2026-11-27T10:25:42Z",
+                "name": "quota-map.18ebdffa45e92880",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4338",
+                "uid": "65474824-679e-4d68-8091-461a5bf8c4c6"
+            },
+            "reason": "FailedCreate",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-27T10:25:46Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "quota-map",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4339",
+                "uid": "d564fcf9-ece5-450e-a396-1f915767b3e0"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-27T10:25:46Z",
+            "message": "Error creating: pods \"quota-map-1-4kxkm\" is forbidden: exceeded quota: hw5-quota, requested: requests.cpu=600m, used: requests.cpu=600m, limited: requests.cpu=1",
+            "metadata": {
+                "creationTimestamp": "2026-11-27T10:25:46Z",
+                "name": "quota-map.18ebdffb244ab92e",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4347",
+                "uid": "dd5711a6-3bbb-4825-b6a6-b9333014401a"
+            },
+            "reason": "FailedCreate",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-27T10:25:47Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "quota-map",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4348",
+                "uid": "d564fcf9-ece5-450e-a396-1f915767b3e0"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-27T10:25:47Z",
+            "message": "Error creating: pods \"quota-map-1-shxc7\" is forbidden: exceeded quota: hw5-quota, requested: requests.cpu=600m, used: requests.cpu=600m, limited: requests.cpu=1",
+            "metadata": {
+                "creationTimestamp": "2026-11-27T10:25:47Z",
+                "name": "quota-map.18ebdffb60b1ff80",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4350",
+                "uid": "c32e9224-0730-483e-96e6-7b2964f1b573"
+            },
+            "reason": "FailedCreate",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-27T10:25:51Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "quota-map",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4348",
+                "uid": "d564fcf9-ece5-450e-a396-1f915767b3e0"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-27T10:25:51Z",
+            "message": "Error creating: pods \"quota-map-1-fb7jw\" is forbidden: exceeded quota: hw5-quota, requested: requests.cpu=600m, used: requests.cpu=600m, limited: requests.cpu=1",
+            "metadata": {
+                "creationTimestamp": "2026-11-27T10:25:51Z",
+                "name": "quota-map.18ebdffc4f85bac0",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4355",
+                "uid": "b5793944-bc01-4e28-b49a-5f85c82e535e"
+            },
+            "reason": "FailedCreate",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-27T10:25:59Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "quota-map",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4348",
+                "uid": "d564fcf9-ece5-450e-a396-1f915767b3e0"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-27T10:25:59Z",
+            "message": "Error creating: pods \"quota-map-1-qmmcd\" is forbidden: exceeded quota: hw5-quota, requested: requests.cpu=600m, used: requests.cpu=600m, limited: requests.cpu=1",
+            "metadata": {
+                "creationTimestamp": "2026-11-27T10:25:59Z",
+                "name": "quota-map.18ebdffe2cb246b2",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4364",
+                "uid": "036827f5-8244-4ecd-ad52-b88762efabc4"
+            },
+            "reason": "FailedCreate",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-27T10:26:15Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "quota-map",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4348",
+                "uid": "d564fcf9-ece5-450e-a396-1f915767b3e0"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-27T10:26:15Z",
+            "message": "Error creating: pods \"quota-map-1-wrz6q\" is forbidden: exceeded quota: hw5-quota, requested: requests.cpu=600m, used: requests.cpu=600m, limited: requests.cpu=1",
+            "metadata": {
+                "creationTimestamp": "2026-11-27T10:26:15Z",
+                "name": "quota-map.18ebe001e6eb8ecd",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4379",
+                "uid": "b6e068dd-d519-42d9-b961-5d972c63897b"
+            },
+            "reason": "FailedCreate",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-27T10:26:20Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "quota-map",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4348",
+                "uid": "d564fcf9-ece5-450e-a396-1f915767b3e0"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-27T10:26:20Z",
+            "message": "Error creating: pods \"quota-map-1-nn46m\" is forbidden: exceeded quota: hw5-quota, requested: requests.cpu=600m, used: requests.cpu=600m, limited: requests.cpu=1",
+            "metadata": {
+                "creationTimestamp": "2026-11-27T10:26:20Z",
+                "name": "quota-map.18ebe0032b692c52",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4384",
+                "uid": "1b4f6b8a-389f-4665-939b-1120ad05c765"
+            },
+            "reason": "FailedCreate",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-27T10:26:21Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "quota-map",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4385",
+                "uid": "d564fcf9-ece5-450e-a396-1f915767b3e0"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-27T10:26:21Z",
+            "message": "Created pod: quota-map-1-pzdbx",
+            "metadata": {
+                "creationTimestamp": "2026-11-27T10:26:21Z",
+                "name": "quota-map.18ebe0036844859d",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4393",
+                "uid": "7ecd8538-3446-4d7e-98fd-45747d823eb3"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-27T10:26:21Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "quota-map",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4385",
+                "uid": "d564fcf9-ece5-450e-a396-1f915767b3e0"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-27T10:26:21Z",
+            "message": "Error creating: pods \"quota-map-2-zwjl4\" is forbidden: exceeded quota: hw5-quota, requested: requests.cpu=600m, used: requests.cpu=600m, limited: requests.cpu=1",
+            "metadata": {
+                "creationTimestamp": "2026-11-27T10:26:21Z",
+                "name": "quota-map.18ebe003686fcfd3",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4396",
+                "uid": "dbce8d02-9a4f-4285-9460-a1ee58efcac1"
+            },
+            "reason": "FailedCreate",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-27T10:26:22Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "quota-map",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4394",
+                "uid": "d564fcf9-ece5-450e-a396-1f915767b3e0"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-27T10:26:22Z",
+            "message": "Error creating: pods \"quota-map-2-r8cs7\" is forbidden: exceeded quota: hw5-quota, requested: requests.cpu=600m, used: requests.cpu=600m, limited: requests.cpu=1",
+            "metadata": {
+                "creationTimestamp": "2026-11-27T10:26:22Z",
+                "name": "quota-map.18ebe003a42aee28",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4405",
+                "uid": "fdd5817c-25d8-4204-8201-1052056456a5"
+            },
+            "reason": "FailedCreate",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 6,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-27T10:26:23Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "quota-map",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4406",
+                "uid": "d564fcf9-ece5-450e-a396-1f915767b3e0"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-27T10:27:34Z",
+            "message": "(combined from similar events): Error creating: pods \"quota-map-3-rn5sd\" is forbidden: exceeded quota: hw5-quota, requested: requests.cpu=600m, used: requests.cpu=600m, limited: requests.cpu=1",
+            "metadata": {
+                "creationTimestamp": "2026-11-27T10:26:23Z",
+                "name": "quota-map.18ebe003e08d8141",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4492",
+                "uid": "03a5a725-d653-40a2-a693-d332fc54ed67"
+            },
+            "reason": "FailedCreate",
+            "reportingComponent": "",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-27T10:26:58Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "quota-map",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4437",
+                "uid": "d564fcf9-ece5-450e-a396-1f915767b3e0"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-27T10:26:58Z",
+            "message": "Created pod: quota-map-2-2dg6b",
+            "metadata": {
+                "creationTimestamp": "2026-11-27T10:26:58Z",
+                "name": "quota-map.18ebe00c011f7cc3",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4446",
+                "uid": "2d68bc12-2dfd-4d1e-a8a3-bf84f5b03765"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-27T10:27:35Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "quota-map",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4491",
+                "uid": "d564fcf9-ece5-450e-a396-1f915767b3e0"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-27T10:27:35Z",
+            "message": "Created pod: quota-map-3-v2z54",
+            "metadata": {
+                "creationTimestamp": "2026-11-27T10:27:35Z",
+                "name": "quota-map.18ebe0149734c3fa",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4498",
+                "uid": "ba82532a-7f6c-42fe-9b2d-17d033cdaac2"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-27T10:28:12Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "quota-map",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4546",
+                "uid": "d564fcf9-ece5-450e-a396-1f915767b3e0"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-27T10:28:12Z",
+            "message": "Job completed",
+            "metadata": {
+                "creationTimestamp": "2026-11-27T10:28:12Z",
+                "name": "quota-map.18ebe01d2def5bc0",
+                "namespace": "hw5-quota",
+                "resourceVersion": "4549",
+                "uid": "6012e761-5e4f-4091-8949-17651a064e6d"
+            },
+            "reason": "Completed",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

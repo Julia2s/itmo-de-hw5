@@ -1,0 +1,33 @@
+﻿**********************
+Начало записи сценария Windows PowerShell
+Время начала: 20261127125523
+Имя пользователя: DESKTOP-3H8F2AH\julia
+Запуск от имени пользователя: DESKTOP-3H8F2AH\julia
+Имя конфигурации: 
+Компьютер: DESKTOP-3H8F2AH (Microsoft Windows NT 10.0.26300.0)
+Ведущее приложение: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -noexit -command try { . "c:\Users\Юлия\AppData\Local\Programs\Microsoft VS Code\661626d0e7\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+ИД процесса: 21652
+PSVersion: 5.1.26100.9818
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9818
+BuildVersion: 10.0.26100.9818
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+job.batch/skills-partition created
+job.batch/skills-parallel created
+NAME                      READY   STATUS    RESTARTS   AGE   IP            NODE   NOMINATED NODE   READINESS GATES
+skills-parallel-0-75nnl   1/1     Running   0          2s    10.244.0.13   hw5    <none>           <none>
+skills-parallel-1-pv6bx   1/1     Running   0          2s    10.244.0.14   hw5    <none>           <none>
+SCREENSHOT: report/screenshots/07-parallel.png
+job.batch/skills-reduce created
+Downloaded and verified 3 CSV files to data\results_parallel
+}
+
+SCREENSHOT: report/screenshots/08-results.png
+**********************
+Конец записи протокола Windows PowerShell
+Время окончания: 20261127125854
+**********************

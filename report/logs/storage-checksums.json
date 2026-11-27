@@ -1,0 +1,15 @@
+{
+  "key": "raw/vacancies.csv",
+  "bytes": 847619384,
+  "source_sha256": "fb6a23f662c0b458e7d45d723862df5406cc25366164f4bb8246aad1cd4e83ef",
+  "target_sha256": "fb6a23f662c0b458e7d45d723862df5406cc25366164f4bb8246aad1cd4e83ef",
+  "ok": true,
+  "source_identity": {
+    "ContentLength": "847619384",
+    "ETag": "\"efb65458995932747001aa004592d19c-102\"",
+    "LastModified": "2026-11-06 10:26:58+00:00",
+    "VersionId": "None"
+  },
+  "source_endpoint": "http://127.0.0.1:9010",
+  "target_endpoint": "http://127.0.0.1:19000"
+}

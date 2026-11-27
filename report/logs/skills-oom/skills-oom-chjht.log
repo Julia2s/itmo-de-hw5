@@ -1,0 +1,3 @@
+﻿2026-11-27T09:42:03.117625103Z MEMORY_SAMPLE={"rss_peak_mib": 23.9296875, "source": "cgroup_v1", "peak_mib": 15.65625, "memory_limit": "67108864", "current_mib": 15.65625, "elapsed_s": 0.044}
+2026-11-27T09:42:04.129707235Z MEMORY_SAMPLE={"rss_peak_mib": 45.09375, "source": "cgroup_v1", "peak_mib": 36.77734375, "memory_limit": "67108864", "current_mib": 36.73046875, "elapsed_s": 1.056}
+2026-11-27T09:42:04.376285585Z {"phase": "start", "mode": "sequential", "index": null, "run_id": null, "start": 0, "end": 847619384, "input": {"bucket": "hh-lake", "key": "raw/vacancies.csv", "size": 847619384, "etag": "efb65458995932747001aa004592d19c-102", "last_modified": "2026-11-06 10:26:58+00:00", "filter_mode": "role"}, "pace_seconds": 0}

@@ -1,0 +1,31 @@
+﻿{
+    "apiVersion":  "v1",
+    "count":  1,
+    "eventTime":  null,
+    "firstTimestamp":  "2026-11-27T10:21:15Z",
+    "involvedObject":  {
+                           "apiVersion":  "v1",
+                           "kind":  "Pod",
+                           "name":  "low-map-0-46jpl",
+                           "namespace":  "hw5",
+                           "resourceVersion":  "3950",
+                           "uid":  "a9be9082-d27b-4b84-8e95-bfbf332beff6"
+                       },
+    "kind":  "Event",
+    "lastTimestamp":  "2026-11-27T10:21:15Z",
+    "message":  "Preempted by pod 15e5e6e7-b94b-47a9-bf46-27463eefddd7 on node hw5",
+    "metadata":  {
+                     "creationTimestamp":  "2026-11-27T10:21:15Z",
+                     "name":  "low-map-0-46jpl.18ebdfbc37cf46a7",
+                     "namespace":  "hw5",
+                     "resourceVersion":  "3964",
+                     "uid":  "66b3f485-fe46-423f-876a-a95fe1956736"
+                 },
+    "reason":  "Preempted",
+    "reportingComponent":  "default-scheduler",
+    "reportingInstance":  "",
+    "source":  {
+                   "component":  "default-scheduler"
+               },
+    "type":  "Normal"
+}

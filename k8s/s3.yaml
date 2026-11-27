@@ -1,0 +1,97 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: rustfs-data
+  namespace: hw5
+spec:
+  accessModes: [ReadWriteOnce]
+  resources:
+    requests:
+      storage: 5Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rustfs
+  namespace: hw5
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: rustfs
+  template:
+    metadata:
+      labels:
+        app: rustfs
+    spec:
+      automountServiceAccountToken: false
+      securityContext:
+        runAsUser: 10001
+        runAsGroup: 10001
+        fsGroup: 10001
+        fsGroupChangePolicy: OnRootMismatch
+      # The minikube hostPath provisioner may not apply fsGroup to the PVC.
+      # Initialize only this homework volume, using the already loaded image.
+      initContainers:
+        - name: prepare-data
+          image: hw5-skills:local
+          imagePullPolicy: Never
+          securityContext:
+            runAsUser: 0
+            runAsGroup: 0
+          command: [python, '-c']
+          args:
+            - |
+              import os
+              for path in ['/data'] + [f'/data/vol{i}' for i in range(1, 5)]:
+                  os.makedirs(path, exist_ok=True)
+                  os.chown(path, 10001, 10001)
+                  os.chmod(path, 0o775)
+          resources:
+            requests: {cpu: 100m, memory: 32Mi}
+            limits: {cpu: 250m, memory: 64Mi}
+          volumeMounts:
+            - {name: data, mountPath: /data}
+      containers:
+        - name: rustfs
+          image: rustfs/rustfs:1.0.0
+          env:
+            - name: RUSTFS_ACCESS_KEY
+              valueFrom:
+                secretKeyRef: {name: s3-credentials, key: S3_ACCESS_KEY}
+            - name: RUSTFS_SECRET_KEY
+              valueFrom:
+                secretKeyRef: {name: s3-credentials, key: S3_SECRET_KEY}
+            - {name: RUSTFS_VOLUMES, value: '/data/vol{1...4}'}
+            - {name: RUSTFS_UNSAFE_BYPASS_DISK_CHECK, value: 'true'}
+          ports:
+            - {name: s3, containerPort: 9000}
+            - {name: console, containerPort: 9001}
+          resources:
+            requests: {cpu: 250m, memory: 512Mi}
+            limits: {cpu: '1', memory: 2Gi}
+          startupProbe:
+            httpGet: {path: /health, port: s3}
+            periodSeconds: 5
+            failureThreshold: 60
+          readinessProbe:
+            httpGet: {path: /health, port: s3}
+            periodSeconds: 5
+          volumeMounts:
+            - {name: data, mountPath: /data}
+      volumes:
+        - name: data
+          persistentVolumeClaim: {claimName: rustfs-data}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rustfs
+  namespace: hw5
+spec:
+  selector: {app: rustfs}
+  ports:
+    - {name: s3, port: 9000, targetPort: s3}
+    - {name: console, port: 9001, targetPort: console}

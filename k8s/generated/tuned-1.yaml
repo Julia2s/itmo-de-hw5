@@ -1,0 +1,51 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: tuned-1
+  namespace: hw5
+  labels:
+    app: skills-experiment
+    experiment: tuned-1
+  annotations:
+    hw5/peak-mib: '129.308594'
+    hw5/margin: '1.3'
+    hw5/formula: ceil(peak * margin / 16) * 16 MiB
+spec:
+  backoffLimit: 0
+  activeDeadlineSeconds: 900
+  template:
+    metadata:
+      labels:
+        app: skills-experiment
+        experiment: tuned-1
+    spec:
+      restartPolicy: Never
+      automountServiceAccountToken: false
+      containers:
+      - name: worker
+        image: hw5-skills:local
+        imagePullPolicy: Never
+        command:
+        - python
+        - src/worker.py
+        args:
+        - --mode
+        - sequential
+        - --prefix
+        - hw5/tuned-1
+        env:
+        - name: S3_ENDPOINT
+          value: http://host.docker.internal:9010
+        envFrom:
+        - configMapRef:
+            name: hw5-config
+        - secretRef:
+            name: s3-credentials
+        resources:
+          requests:
+            cpu: 500m
+            memory: 176Mi
+          limits:
+            cpu: '1'
+            memory: 176Mi
+      terminationGracePeriodSeconds: 10

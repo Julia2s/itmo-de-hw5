@@ -1,0 +1,95 @@
+﻿apiVersion: batch/v1
+kind: Job
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"batch/v1","kind":"Job","metadata":{"annotations":{},"labels":{"app":"skills-experiment","experiment":"urgent"},"name":"urgent","namespace":"hw5"},"spec":{"activeDeadlineSeconds":900,"backoffLimit":0,"template":{"metadata":{"labels":{"app":"skills-experiment","experiment":"urgent"}},"spec":{"automountServiceAccountToken":false,"containers":[{"args":["--mode","sequential","--prefix","hw5/urgent"],"command":["python","src/worker.py"],"env":[{"name":"S3_ENDPOINT","value":"http://rustfs.hw5.svc.cluster.local:9000"}],"envFrom":[{"configMapRef":{"name":"hw5-config"}},{"secretRef":{"name":"s3-credentials"}}],"image":"hw5-skills:local","imagePullPolicy":"Never","name":"worker","resources":{"limits":{"cpu":"1680m","memory":"1Gi"},"requests":{"cpu":"1680m","memory":"1Gi"}}}],"nodeSelector":{"kubernetes.io/hostname":"hw5"},"priorityClassName":"hw5-high","restartPolicy":"Never","terminationGracePeriodSeconds":10}}}}
+  creationTimestamp: "2026-11-27T10:21:15Z"
+  generation: 1
+  labels:
+    app: skills-experiment
+    experiment: urgent
+  name: urgent
+  namespace: hw5
+  resourceVersion: "4018"
+  uid: 2d110aab-861b-4f9a-b3a3-42b59550eecc
+spec:
+  activeDeadlineSeconds: 900
+  backoffLimit: 0
+  completionMode: NonIndexed
+  completions: 1
+  manualSelector: false
+  parallelism: 1
+  podReplacementPolicy: TerminatingOrFailed
+  selector:
+    matchLabels:
+      batch.kubernetes.io/controller-uid: 2d110aab-861b-4f9a-b3a3-42b59550eecc
+  suspend: false
+  template:
+    metadata:
+      labels:
+        app: skills-experiment
+        batch.kubernetes.io/controller-uid: 2d110aab-861b-4f9a-b3a3-42b59550eecc
+        batch.kubernetes.io/job-name: urgent
+        controller-uid: 2d110aab-861b-4f9a-b3a3-42b59550eecc
+        experiment: urgent
+        job-name: urgent
+    spec:
+      automountServiceAccountToken: false
+      containers:
+      - args:
+        - --mode
+        - sequential
+        - --prefix
+        - hw5/urgent
+        command:
+        - python
+        - src/worker.py
+        env:
+        - name: S3_ENDPOINT
+          value: http://rustfs.hw5.svc.cluster.local:9000
+        envFrom:
+        - configMapRef:
+            name: hw5-config
+        - secretRef:
+            name: s3-credentials
+        image: hw5-skills:local
+        imagePullPolicy: Never
+        name: worker
+        resources:
+          limits:
+            cpu: 1680m
+            memory: 1Gi
+          requests:
+            cpu: 1680m
+            memory: 1Gi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      nodeSelector:
+        kubernetes.io/hostname: hw5
+      priorityClassName: hw5-high
+      restartPolicy: Never
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 10
+status:
+  completionTime: "2026-11-27T10:21:35Z"
+  conditions:
+  - lastProbeTime: "2026-11-27T10:21:35Z"
+    lastTransitionTime: "2026-11-27T10:21:35Z"
+    message: Reached expected number of succeeded pods
+    reason: CompletionsReached
+    status: "True"
+    type: SuccessCriteriaMet
+  - lastProbeTime: "2026-11-27T10:21:35Z"
+    lastTransitionTime: "2026-11-27T10:21:35Z"
+    message: Reached expected number of succeeded pods
+    reason: CompletionsReached
+    status: "True"
+    type: Complete
+  ready: 0
+  startTime: "2026-11-27T10:21:15Z"
+  succeeded: 1
+  terminating: 0
+  uncountedTerminatedPods: {}

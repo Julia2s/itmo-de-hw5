@@ -1,0 +1,469 @@
+{
+  "observed_at": "2026-11-27T09:54:41.633394+00:00",
+  "pods": {
+    "apiVersion": "v1",
+    "items": [
+      {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "creationTimestamp": "2026-11-27T09:49:42Z",
+          "generateName": "rustfs-6976b979bb-",
+          "generation": 1,
+          "labels": {
+            "app": "rustfs",
+            "pod-template-hash": "6976b979bb"
+          },
+          "name": "rustfs-6976b979bb-dnkc7",
+          "namespace": "hw5",
+          "ownerReferences": [
+            {
+              "apiVersion": "apps/v1",
+              "blockOwnerDeletion": true,
+              "controller": true,
+              "kind": "ReplicaSet",
+              "name": "rustfs-6976b979bb",
+              "uid": "7300007a-6358-46c9-928a-0c2dcd815643"
+            }
+          ],
+          "resourceVersion": "2031",
+          "uid": "29d205f4-18de-41da-aaa3-b2b6e163d5f4"
+        },
+        "spec": {
+          "automountServiceAccountToken": false,
+          "containers": [
+            {
+              "env": [
+                {
+                  "name": "RUSTFS_ACCESS_KEY",
+                  "valueFrom": {
+                    "secretKeyRef": {
+                      "key": "S3_ACCESS_KEY",
+                      "name": "s3-credentials"
+                    }
+                  }
+                },
+                {
+                  "name": "RUSTFS_SECRET_KEY",
+                  "valueFrom": {
+                    "secretKeyRef": {
+                      "key": "S3_SECRET_KEY",
+                      "name": "s3-credentials"
+                    }
+                  }
+                },
+                {
+                  "name": "RUSTFS_VOLUMES",
+                  "value": "/data/vol{1...4}"
+                },
+                {
+                  "name": "RUSTFS_UNSAFE_BYPASS_DISK_CHECK",
+                  "value": "true"
+                }
+              ],
+              "image": "rustfs/rustfs:1.0.0",
+              "imagePullPolicy": "IfNotPresent",
+              "name": "rustfs",
+              "ports": [
+                {
+                  "containerPort": 9000,
+                  "name": "s3",
+                  "protocol": "TCP"
+                },
+                {
+                  "containerPort": 9001,
+                  "name": "console",
+                  "protocol": "TCP"
+                }
+              ],
+              "readinessProbe": {
+                "failureThreshold": 3,
+                "httpGet": {
+                  "path": "/health",
+                  "port": "s3",
+                  "scheme": "HTTP"
+                },
+                "periodSeconds": 5,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "resources": {
+                "limits": {
+                  "cpu": "1",
+                  "memory": "2Gi"
+                },
+                "requests": {
+                  "cpu": "250m",
+                  "memory": "512Mi"
+                }
+              },
+              "startupProbe": {
+                "failureThreshold": 60,
+                "httpGet": {
+                  "path": "/health",
+                  "port": "s3",
+                  "scheme": "HTTP"
+                },
+                "periodSeconds": 5,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/data",
+                  "name": "data"
+                }
+              ]
+            }
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "enableServiceLinks": true,
+          "initContainers": [
+            {
+              "args": [
+                "import os\nfor path in ['/data'] + [f'/data/vol{i}' for i in range(1, 5)]:\n    os.makedirs(path, exist_ok=True)\n    os.chown(path, 10001, 10001)\n    os.chmod(path, 0o775)\n"
+              ],
+              "command": [
+                "python",
+                "-c"
+              ],
+              "image": "hw5-skills:local",
+              "imagePullPolicy": "Never",
+              "name": "prepare-data",
+              "resources": {
+                "limits": {
+                  "cpu": "250m",
+                  "memory": "64Mi"
+                },
+                "requests": {
+                  "cpu": "100m",
+                  "memory": "32Mi"
+                }
+              },
+              "securityContext": {
+                "runAsGroup": 0,
+                "runAsUser": 0
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/data",
+                  "name": "data"
+                }
+              ]
+            }
+          ],
+          "nodeName": "hw5",
+          "preemptionPolicy": "PreemptLowerPriority",
+          "priority": 0,
+          "restartPolicy": "Always",
+          "schedulerName": "default-scheduler",
+          "securityContext": {
+            "fsGroup": 10001,
+            "fsGroupChangePolicy": "OnRootMismatch",
+            "runAsGroup": 10001,
+            "runAsUser": 10001
+          },
+          "serviceAccount": "default",
+          "serviceAccountName": "default",
+          "terminationGracePeriodSeconds": 30,
+          "tolerations": [
+            {
+              "effect": "NoExecute",
+              "key": "node.kubernetes.io/not-ready",
+              "operator": "Exists",
+              "tolerationSeconds": 300
+            },
+            {
+              "effect": "NoExecute",
+              "key": "node.kubernetes.io/unreachable",
+              "operator": "Exists",
+              "tolerationSeconds": 300
+            }
+          ],
+          "volumes": [
+            {
+              "name": "data",
+              "persistentVolumeClaim": {
+                "claimName": "rustfs-data"
+              }
+            }
+          ]
+        },
+        "status": {
+          "allocatedResources": {
+            "cpu": "250m",
+            "memory": "512Mi"
+          },
+          "conditions": [
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-11-27T09:49:45Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "PodReadyToStartContainers"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-11-27T09:49:46Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "Initialized"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-11-27T09:50:10Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "Ready"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-11-27T09:50:10Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "ContainersReady"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-11-27T09:49:42Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "PodScheduled"
+            }
+          ],
+          "containerStatuses": [
+            {
+              "allocatedResources": {
+                "cpu": "250m",
+                "memory": "512Mi"
+              },
+              "containerID": "containerd://92994a044ef0998957baa721a77103e18c153878016fca79b467dafe91d06d2d",
+              "image": "docker.io/rustfs/rustfs:1.0.0",
+              "imageID": "docker.io/rustfs/rustfs@sha256:8cc9801755448b71a786705ce76692c77e14936cccd87cf2fc31842e58f4d1ff",
+              "lastState": {},
+              "name": "rustfs",
+              "ready": true,
+              "resources": {
+                "limits": {
+                  "cpu": "1",
+                  "memory": "2Gi"
+                },
+                "requests": {
+                  "cpu": "250m",
+                  "memory": "512Mi"
+                }
+              },
+              "restartCount": 0,
+              "started": true,
+              "state": {
+                "running": {
+                  "startedAt": "2026-11-27T09:50:06Z"
+                }
+              },
+              "user": {
+                "linux": {
+                  "gid": 10001,
+                  "supplementalGroups": [
+                    10001
+                  ],
+                  "uid": 10001
+                }
+              },
+              "volumeMounts": [
+                {
+                  "mountPath": "/data",
+                  "name": "data"
+                }
+              ]
+            }
+          ],
+          "hostIP": "192.168.49.2",
+          "hostIPs": [
+            {
+              "ip": "192.168.49.2"
+            }
+          ],
+          "initContainerStatuses": [
+            {
+              "allocatedResources": {
+                "cpu": "100m",
+                "memory": "32Mi"
+              },
+              "containerID": "containerd://b71c058966265a91f81c2c53da2beeac39bf5742f20e0f80c02ae434cd94c5ac",
+              "image": "docker.io/library/hw5-skills:local",
+              "imageID": "sha256:c22a2a0fc9c23d277c03cb3ac7ce84f1e9a689b33ba000c29c26f83dfa1d695d",
+              "lastState": {},
+              "name": "prepare-data",
+              "ready": true,
+              "resources": {
+                "limits": {
+                  "cpu": "250m",
+                  "memory": "64Mi"
+                },
+                "requests": {
+                  "cpu": "100m",
+                  "memory": "32Mi"
+                }
+              },
+              "restartCount": 0,
+              "started": false,
+              "state": {
+                "terminated": {
+                  "containerID": "containerd://b71c058966265a91f81c2c53da2beeac39bf5742f20e0f80c02ae434cd94c5ac",
+                  "exitCode": 0,
+                  "finishedAt": "2026-11-27T09:49:46Z",
+                  "reason": "Completed",
+                  "startedAt": "2026-11-27T09:49:45Z"
+                }
+              },
+              "user": {
+                "linux": {
+                  "gid": 0,
+                  "supplementalGroups": [
+                    0,
+                    10001
+                  ],
+                  "uid": 0
+                }
+              },
+              "volumeMounts": [
+                {
+                  "mountPath": "/data",
+                  "name": "data"
+                }
+              ]
+            }
+          ],
+          "observedGeneration": 1,
+          "phase": "Running",
+          "podIP": "10.244.0.11",
+          "podIPs": [
+            {
+              "ip": "10.244.0.11"
+            }
+          ],
+          "qosClass": "Burstable",
+          "resources": {
+            "limits": {
+              "cpu": "1",
+              "memory": "2Gi"
+            },
+            "requests": {
+              "cpu": "250m",
+              "memory": "512Mi"
+            }
+          },
+          "startTime": "2026-11-27T09:49:42Z"
+        }
+      }
+    ],
+    "kind": "List",
+    "metadata": {
+      "resourceVersion": ""
+    }
+  },
+  "pvc": {
+    "apiVersion": "v1",
+    "kind": "PersistentVolumeClaim",
+    "metadata": {
+      "annotations": {
+        "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"PersistentVolumeClaim\",\"metadata\":{\"annotations\":{},\"name\":\"rustfs-data\",\"namespace\":\"hw5\"},\"spec\":{\"accessModes\":[\"ReadWriteOnce\"],\"resources\":{\"requests\":{\"storage\":\"5Gi\"}}}}\n",
+        "pv.kubernetes.io/bind-completed": "yes",
+        "pv.kubernetes.io/bound-by-controller": "yes",
+        "volume.beta.kubernetes.io/storage-provisioner": "k8s.io/minikube-hostpath",
+        "volume.kubernetes.io/storage-provisioner": "k8s.io/minikube-hostpath"
+      },
+      "creationTimestamp": "2026-11-27T09:49:42Z",
+      "finalizers": [
+        "kubernetes.io/pvc-protection"
+      ],
+      "name": "rustfs-data",
+      "namespace": "hw5",
+      "resourceVersion": "1991",
+      "uid": "d6e3db8e-9003-49f2-9e00-7b831e7bcaba"
+    },
+    "spec": {
+      "accessModes": [
+        "ReadWriteOnce"
+      ],
+      "resources": {
+        "requests": {
+          "storage": "5Gi"
+        }
+      },
+      "storageClassName": "standard",
+      "volumeMode": "Filesystem",
+      "volumeName": "pvc-d6e3db8e-9003-49f2-9e00-7b831e7bcaba"
+    },
+    "status": {
+      "accessModes": [
+        "ReadWriteOnce"
+      ],
+      "capacity": {
+        "storage": "5Gi"
+      },
+      "conditions": [
+        {
+          "lastProbeTime": null,
+          "lastTransitionTime": "2026-11-27T09:49:42Z",
+          "message": "A pod is currently referencing this PVC",
+          "reason": "PodUsingPVC",
+          "status": "False",
+          "type": "Unused"
+        }
+      ],
+      "phase": "Bound"
+    }
+  },
+  "service": {
+    "apiVersion": "v1",
+    "kind": "Service",
+    "metadata": {
+      "annotations": {
+        "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"name\":\"rustfs\",\"namespace\":\"hw5\"},\"spec\":{\"ports\":[{\"name\":\"s3\",\"port\":9000,\"targetPort\":\"s3\"},{\"name\":\"console\",\"port\":9001,\"targetPort\":\"console\"}],\"selector\":{\"app\":\"rustfs\"}}}\n"
+      },
+      "creationTimestamp": "2026-11-27T09:49:42Z",
+      "name": "rustfs",
+      "namespace": "hw5",
+      "resourceVersion": "1976",
+      "uid": "27fe0eee-34f7-4cbb-b921-54b881ff18d0"
+    },
+    "spec": {
+      "clusterIP": "10.101.70.19",
+      "clusterIPs": [
+        "10.101.70.19"
+      ],
+      "internalTrafficPolicy": "Cluster",
+      "ipFamilies": [
+        "IPv4"
+      ],
+      "ipFamilyPolicy": "SingleStack",
+      "ports": [
+        {
+          "name": "s3",
+          "port": 9000,
+          "protocol": "TCP",
+          "targetPort": "s3"
+        },
+        {
+          "name": "console",
+          "port": 9001,
+          "protocol": "TCP",
+          "targetPort": "console"
+        }
+      ],
+      "selector": {
+        "app": "rustfs"
+      },
+      "sessionAffinity": "None",
+      "type": "ClusterIP"
+    },
+    "status": {
+      "loadBalancer": {}
+    }
+  }
+}

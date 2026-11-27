@@ -1,0 +1,74 @@
+{
+  "run_id": null,
+  "index": null,
+  "input": {
+    "bucket": "hh-lake",
+    "key": "raw/vacancies.csv",
+    "size": 847619384,
+    "etag": "efb65458995932747001aa004592d19c-102",
+    "last_modified": "2026-11-06 10:26:58+00:00",
+    "filter_mode": "role"
+  },
+  "start": 0,
+  "end": 847619384,
+  "stats": {
+    "lines_total": 229389,
+    "lines_prefiltered": 5784,
+    "lines_passed_prefilter": 5158,
+    "lines_with_skills": 3534,
+    "lines_malformed": 0,
+    "events_per_k": {
+      "1": 28336,
+      "2": 134651,
+      "3": 506549
+    }
+  },
+  "sha256": {
+    "skills_1.csv": "21cd3f212d9a0f5fc670b7c3e245f69ebddc53b76eef0ff9dd4919eaff9bbf16",
+    "skills_2.csv": "51ca84a101669e4384fecc072e4702d208e371873b4fd97063ac343b53fe5a82",
+    "skills_3.csv": "072f5ee88cd65cee8126578bef39a8a6e5f0a2658ce44aec82d3715e23ae7652"
+  },
+  "results": {
+    "1": {
+      "n_combinations": 1401,
+      "total_frequency": 28336,
+      "top": [
+        [
+          "linux"
+        ],
+        2190
+      ],
+      "s3_key": "hw5/tuned-1/skills_1.csv",
+      "local_path": "data/results_hw5/skills_1.csv"
+    },
+    "2": {
+      "n_combinations": 20454,
+      "total_frequency": 134651,
+      "top": [
+        [
+          "docker",
+          "kubernetes"
+        ],
+        1251
+      ],
+      "s3_key": "hw5/tuned-1/skills_2.csv",
+      "local_path": "data/results_hw5/skills_2.csv"
+    },
+    "3": {
+      "n_combinations": 144024,
+      "total_frequency": 506549,
+      "top": [
+        [
+          "docker",
+          "kubernetes",
+          "linux"
+        ],
+        804
+      ],
+      "s3_key": "hw5/tuned-1/skills_3.csv",
+      "local_path": "data/results_hw5/skills_3.csv"
+    }
+  },
+  "pace_seconds": 0,
+  "elapsed_s": 48.964
+}
