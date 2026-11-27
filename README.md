@@ -41,9 +41,6 @@ S3/Kubernetes. Проверка POSIX SIGTERM выполняется в Linux-о
 | `scripts/collect_results.py`, `verify_results.py` | Скачивание и сравнение полных CSV/топ-10/хешей |
 | [Отчёт (PDF)](report/report.pdf) | Результаты экспериментов и ответы на вопросы |
 
-Имена Python-файлов теперь без префикса `hw5`. Имена существующих
-namespace/образа/S3-префиксов оставлены прежними: они идентифицируют стенд.
-
 ## Порядок реальных запусков
 
 1. Docker Desktop Linux, minikube `hw5`, загрузить `hw5-skills:local`.
